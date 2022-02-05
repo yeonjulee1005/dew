@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Menu />
     <div class="dLog">
       <div class="slider-section">
         <div class="slide-wrapper">
@@ -42,6 +43,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import Menu from '@/components/menu.vue'
 import Footer from '@/components/footer.vue'
 import Glightbox from 'glightbox'
 import 'glightbox/dist/css/glightbox.css'
@@ -50,7 +52,7 @@ import 'glightbox/dist/js/glightbox'
 export default defineComponent({
   title: 'dLog',
   components: {
-    Footer
+    Menu, Footer
   },
   mounted () {
     // lightbox settings

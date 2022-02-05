@@ -5,12 +5,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'main',
-    component: main,
+    component: main
   },
   {
     path: '/projects',
     name: 'projects',
-    component: () => import(/* webpackChunkName: "projects"*/'../views/projects.vue'),
+    component: () => import(/* webpackChunkName: "projects" */'../views/projects.vue')
   },
   {
     path: '/dLog',
@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "dLog" */ '../views/dLog.vue')
   },
-  { 
+  {
     path: '/:pathMatch(.*)',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue')
@@ -30,9 +30,9 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior (to, from, savedPosition) {
     return savedPosition || new Promise((resolve) => {
-      setTimeout(() =>resolve({ top:0, behavior: 'smooth' }), 800)
+      setTimeout(() => resolve({ top: 0, behavior: 'smooth' }), 800)
     // return {top:null, left:null, behavior: null}
     })
   }

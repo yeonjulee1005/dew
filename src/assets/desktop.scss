@@ -1,0 +1,440 @@
+@include desktop {
+    .header {
+      .logo {
+        margin-left: 100px;
+        .logo-img { width: 200px; }
+      }
+      .desktop-menu {
+        display: unset;
+        font-size: 18px;
+        margin-left: 200px;
+      }
+      .mobile-menu {
+        display: none;
+      }
+    }
+    .Main {
+      .content {
+        position: relative;
+        width: 1200px;
+        height: 100vh;
+        margin: 0 auto;
+        .main-title {
+          position: absolute;
+          width: 200px;
+          top: 0px !important;
+          right: 10%;
+          font-size: 7em;
+          line-height: 95px;
+          font-weight: 900;
+          text-align: right;
+          color: #fcfcfc;
+          writing-mode: vertical-rl;
+          z-index: 10;
+        }
+        .main-text {
+          position: absolute;
+          top: 55%;
+          left: 10%;
+          width: 650px;
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 34px;
+          color: #fcfcfc;
+        }
+        .little-text {
+          font-size: 14px;
+          font-weight: 500;
+          color: #fcfcfc;
+        }
+      }
+      .scroll-down {
+        position: absolute;
+        width: 10vw;
+        height: 100vh;
+        top: 95%;
+        left: 50%;
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+    .resume {
+      position: relative;
+      width: 1200px;
+      height: 55vh;
+      margin: 80px auto 200px;
+  
+      .resume-contents {
+        justify-content: center;
+        width: 40%;
+        .intro-img {
+          position: relative;
+          img {
+            width: 280px;
+            height: 280px;
+            border-radius: 280px;
+            box-shadow: 1px;
+            box-shadow: 5px 5px 15px rgba($color: #a8a9ad, $alpha: .6);
+          }
+        }
+      }
+  
+      .resume-detail {
+        justify-content: space-evenly;
+        width: 60%;
+        .career {
+          width: 25%;
+          font-weight: 800;
+          font-size: 42px;
+        }
+        .career-detail {
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+      .resume-background {
+        position: absolute;
+        top: -35px;
+        width: 100%;
+        height: 500px;
+        background-color: #bcd4e6;
+        border-radius: 100px;
+        box-shadow: 5px 5px 15px rgba($color: #4682b4, $alpha: .6);
+        z-index: -10;
+      }
+    }
+    .skills {
+      position: relative;
+      width: 1200px;
+      height: 140vh;
+      margin: 300px auto 150px;
+      .skills-intro {
+        position: relative;
+        margin: 400px 50px 30px;
+        .skill-image {
+          .css3 {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -350px; left: 600px; width: 100px;
+          }
+          .html5 {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 200px; left: 400px; width: 100px;
+          }
+          .github {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 350px; left: 100px; width: 250px;
+          }
+          .node {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 650px; left: 900px; width: 200px;
+          }
+          .illustration {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 50px; left: 400px; width: 50px;
+          }
+          .xd {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -300px; left: 900px; width: 150px;
+          }
+          .javascript {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -170px; left: -70px; width: 200px;
+          }
+          .typescript {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -430px; left: 150px; width: 200px;
+          }
+          .nuxt {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -250px; left: 250px; width: 300px;
+          }
+          .pgadmin {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 350px; left: 650px; width: 100px;
+          }
+          .postman {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 100px; left: 600px; width: 100px;
+          }
+          .python {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 0px; left: 1000px; width: 100px;
+          }
+          .sass {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 100px; left: 800px; width: 300px;
+          }
+          .vim {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 120px; left: 200px; width: 100px;
+          }
+          .vscode {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -80px; left: 750px; width: 80px;
+          }
+          .vue {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 530px; left: 480px; width: 300px;
+          }
+        }
+        .skills-text {
+          width: 100%;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          &:nth-child(1),
+          &:nth-child(2) {
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 600 !important;
+          }
+          &:nth-child(3),
+          &:nth-child(6),
+          &:nth-child(9) {
+            margin-top: 10px;
+          }
+        }
+        .skills-title-box {
+          position: relative;
+          bottom: 350px;
+          left: -1650px;
+          width: 2000px;
+          height: 400px; 
+          background-color: transparent;
+          border-radius: 40px;
+          border: 7px solid #ffa343;
+          box-shadow: 2px 4px 10px #bfc1c2;
+        }
+      }
+      .frontend-text {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 16px;
+        margin-bottom: 20px;
+      }
+      .backend-text,
+      .tools-text {
+        width: 200px;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 16px;
+        margin: 60px 0 20px;
+      }
+      .skill-list {
+        position: relative;
+        margin-left: 250px;
+        .backend-list {
+          margin-left: -200px;
+        }
+        .skills-text {
+          width: 100px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 20px;
+        }
+        .progress {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .reference {
+      position: relative;
+      width: 1200px;
+      height: 70vh;
+      margin: 500px auto 400px;
+      .reference-section {
+        position: relative;
+        width: 100%;
+        .section-title {
+          font-weight: 800;
+          font-size: 42px;
+        }
+        .section-bg-text {
+          position: absolute;
+          top: 200px;
+          left: -440px;
+          transform: rotateZ(90deg);
+          opacity: 0.1;
+          font-size: 200px;
+          font-weight: 900;
+        }
+        .section-text {
+          width: fit-content;
+          margin: 10px 0 10px 150px;
+          padding-bottom: 5px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          border-bottom: 3px solid #1b1811;
+          border-spacing: 10px;
+        }
+      }
+      .reference-list {
+        .reference-column {
+          .reference-item {
+            height: 200px;
+            margin: 20px 30px;
+            border: 1px solid rgba(#1b1811, 0.3);
+            border-radius: 10px;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overscroll-behavior: auto;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          & img {
+            width: 350px;
+            height: auto;
+          }
+          .item-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+      .reference-background {
+        position: absolute;
+        top: -200px;
+        left: -400px;
+        width: 750px;
+        height: 750px;
+        opacity: 0.2;
+        background-color: #fc419a;
+        border-radius: 750px;
+        box-shadow: 5px 5px 15px rgba($color: #a8a9ad, $alpha: .6);
+        z-index: -10;
+        &:last-child {
+          top: 250px;
+          left: 750px;
+          width: 400px;
+          height: 400px;
+          opacity: 0.4;
+          background-color: #00cc99;
+          border-radius: 400px;
+          box-shadow: 5px 5px 15px rgba($color: #a8a9ad, $alpha: .6);
+        }
+      }
+    }
+    .contact {
+      position: relative;
+      width: 1200px;
+      height: 70vh;
+      margin: 300px auto 200px;
+      .contact-section {
+        position: relative;
+        margin: 0 auto;
+        .contact-title {
+          position: relative;
+          font-weight: 800;
+          font-size: 42px;
+        }
+        .contact-list {
+          position: relative;
+          .kakaotalk {
+            position: relative;
+            width: 300px;
+            margin-right: 100px;
+            .kakaotalk-title,
+            .kakaotalk-image {
+              font-weight: 500;
+              font-size: 20px;
+              margin: 20px auto 50px;
+            }
+            .kakaotalk-desc {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              text-align: center;
+            }
+          }
+          .email-title {
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            margin: 20px auto 50px;
+          }
+          .contact-form {
+            * {box-sizing: border-box;}
+  
+            display: block;
+            margin:auto;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+            p {
+              font-size: 10px;
+              margin-bottom: 5px;
+              text-align: right;
+              color: red;
+            }
+            label {
+              float: left;
+            }
+            input[type=text], [type=email], textarea {
+              width: 100%;
+              padding: 12px;
+              border: none;
+              border-radius: 10px;
+              border-bottom: 1px solid #393432;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              background-color: #fbfbfb;
+              resize: vertical;
+            }
+            input[type=submit] {
+              background-color: #fbab60;
+              color: #fefdfa;
+              padding: 10px 16px;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+            }
+            input[type=submit]:hover {
+              background-color: #ffc377;
+            }
+            input[type=submit]:active {
+              background-color: #ed9f55;
+            }
+          }
+        }
+      }
+    }
+  }

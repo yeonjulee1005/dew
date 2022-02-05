@@ -1,0 +1,506 @@
+
+@include mobile {
+    .header {
+      .logo {
+        margin-left: 30px;
+        .logo-img { width: 120px; }
+      }
+      .desktop-menu {
+        display: none;
+      }
+      .mobile-menu {
+        display: flex;
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        margin-right: 15px;
+      }
+    }
+    .Main {
+      width: 100vw;
+      height: 70vh;
+      .content {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto 20vh;
+        background-image: url(./img/main_banner_mobile.jpg) !important;
+        .main-title {
+          position: absolute;
+          width: 200px;
+          bottom: unset;
+          right: 3%;
+          font-size: 4em;
+          line-height: 1em;
+          font-weight: bold;
+          text-align: right;
+          color: #fcfcfc;
+          writing-mode: vertical-rl;
+          z-index: 10;
+        }
+        .main-text {
+          position: absolute;
+          top: 50%;
+          left: 3%;
+          width: 60vw;
+          font-weight: 600;
+          font-size:1.2em;
+          line-height: 1.4em;
+          word-break: keep-all;
+          color: #fcfcfc;
+        }
+        .little-text {
+          font-size: 0.8em;
+          font-weight: 500;
+          color: #fcfcfc;
+        }
+      }
+      .scroll-down {
+        position: absolute;
+        width: 30vw;
+        height: 100vh;
+        margin: 0 auto;
+        top: 90%;
+        left: 40%;
+        color: #fcfcfc;
+        font-size: 0.8em;
+        font-weight: 200;
+      }
+    }
+    .resume {
+      position: relative;
+      width: 100vw;
+      height: 105vh;
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+      align-items: center;
+      margin: 80px auto 100px;
+  
+      .resume-contents {
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        .intro-img {
+          position: relative;
+          img {
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+            box-shadow: 1px;
+            box-shadow: 3px 3px 10px rgba($color: #a8a9ad, $alpha: .6);
+          }
+        }
+      }
+  
+      .resume-detail {
+        position: relative;
+        justify-content: space-evenly;
+        width: 90vw;
+        .resume-inner {
+  
+          .career {
+            position: relative;
+            width: 90vw;
+            font-weight: 800;
+            font-size: 1.9em;
+            margin: 20px auto;
+            padding-left: 30px;
+          }
+          .career-detail {
+            position: relative;
+            font-weight: 500;
+            width: 80vw;
+            font-size: 1em;
+            height: 70vh;
+            line-height: 20px;
+            margin: 20px auto 0;
+            .el-row {
+              flex-wrap: nowrap;
+              flex-direction: column;
+              max-width: unset;
+              width: 80vw;
+              line-height: 17px;
+              margin-bottom: 5px;
+              .el-col {
+                margin-top: 3px;
+                max-width: unset;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+      .resume-background {
+        position: absolute;
+        top: -60px;
+        width: 90vw;
+        height: 850px;
+        background-color: #bcd4e6;
+        border-radius: 25px;
+        box-shadow: 5px 5px 15px rgba($color: #4682b4, $alpha: .6);
+        z-index: -10;
+      }
+    }
+    .skills {
+      position: relative;
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+      width: 100vw;
+      height: 320vh;
+      margin: 200px auto 0px;
+      .skills-intro {
+        position: relative;
+        width: 80vw;
+        max-width: unset;
+        max-height: 400px;
+        margin: 50px auto 30px;
+        .skill-image {
+          width: 768px;
+          .css3 {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 1100px; left: 150px; width: 100px;
+          }
+          .html5 {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 700px; left: 200px; width: 150px;
+          }
+          .github {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 900px; left: 0px; width: 250px;
+          }
+          .node {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 1550px; left: 150px; width: 200px;
+          }
+          .illustration {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 50px; left: 130px; width: 150px;
+          }
+          .xd {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 1500px; left: -50px; width: 150px;
+          }
+          .javascript {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 1100px; left: 100px; width: 200px;
+          }
+          .typescript {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 1700px; left: 50px; width: 200px;
+          }
+          .nuxt {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -300px; left: 40px; width: 300px;
+          }
+          .pgadmin {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 350px; left: 50px; width: 100px;
+          }
+          .postman {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 150px; left: 0px; width: 150px;
+          }
+          .python {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: -50px; left: 0px; width: 150px;
+          }
+          .sass {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 500px; left: 0px; width: 300px;
+          }
+          .vim {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 420px; left: 150px; width: 150px;
+          }
+          .vscode {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 1250px; left: 50px; width: 150px;
+          }
+          .vue {
+            position: absolute;
+            opacity: .05;
+            z-index: -10;
+            top: 2100px; left: 0px; width: 300px;
+          }
+        }
+        .skills-text {
+          width: 100%;
+          font-weight: 400;
+          font-size: 1em;
+          line-height: 1.3em;
+          &:nth-child(1),
+          &:nth-child(2) {
+            font-size: 1.3em;
+            line-height: 1.4em;
+            font-weight: 600 !important;
+          }
+          &:nth-child(3),
+          &:nth-child(6),
+          &:nth-child(9) {
+            margin-top: 10px;
+          }
+        }
+        .skills-title-box {
+          position: relative;
+          top: -350px;
+          right: 660px;
+          width: 1000px;
+          min-height: 400px;
+          height: 400px; 
+          background-color: transparent;
+          border-radius: 40px;
+          border: 7px solid #ffa343;
+          box-shadow: 2px 4px 10px #bfc1c2;
+        }
+      }
+      .frontend-text {
+        font-weight: 600;
+        font-size: 1.8em;
+        line-height: 1.2em;
+        margin-bottom: 20px;
+      }
+      .backend-text,
+      .tools-text {
+        width: 200px;
+        font-weight: 600;
+        font-size: 1.8em;
+        line-height: 1.2em;
+        margin: 60px 0 20px;
+      }
+      .skill-list {
+        position: relative;
+        width: 90vw;
+        margin: 150px auto 100px;
+        align-items: center;
+        .frontend-list,
+        .backend-list,
+        .tools-list {
+          width: 90vw;
+          .el-progress {
+            width: 90vw !important;
+          }
+        }
+        .skills-text {
+          width: 100px;
+          font-weight: 400;
+          font-size: 1.2em;
+          line-height: 1.2em;
+          margin-bottom: 20px;
+        }
+        .progress {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .reference {
+      position: relative;
+      flex-wrap: nowrap;
+      width: 100vw;
+      height: 300vh;
+      margin: 200px auto 250px;
+      .reference-section {
+        position: relative;
+        margin-top: 200px;
+        width: 100%;
+        .section-title {
+          font-weight: 800;
+          font-size: 2.4em;
+        }
+        .section-bg-text {
+          position: absolute;
+          top: 200px;
+          left: -440px;
+          transform: rotateZ(90deg);
+          opacity: 0.1;
+          font-size: 13em;
+          font-weight: 900;
+        }
+        .section-text {
+          width: fit-content;
+          margin: 10px 0 10px 150px;
+          padding-bottom: 5px;
+          font-weight: 400;
+          font-size: 1.2em;
+          word-break: keep-all;
+          line-height: 22px;
+          border-bottom: 3px solid #1b1811;
+          border-spacing: 10px;
+        }
+      }
+      .reference-list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 0 auto;
+        .reference-column {
+          max-width: unset;
+          .reference-item {
+            position: relative;
+            height: 40vh;
+            width: 80vw;
+            margin: 20px 30px;
+            border: 1px solid rgba(#1b1811, 0.3);
+            border-radius: 10px;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overscroll-behavior: auto;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          & img {
+            width: 100vw;
+            height: auto;
+          }
+          .item-text {
+            font-weight: 400;
+            font-size: 1.2em;
+            line-height: 22px;
+          }
+        }
+      }
+      .reference-background {
+        position: absolute;
+        top: 0px;
+        left: -400px;
+        width: 750px;
+        height: 750px;
+        opacity: 0.2;
+        background-color: #fc419a;
+        border-radius: 750px;
+        box-shadow: 5px 5px 15px rgba($color: #a8a9ad, $alpha: .6);
+        z-index: -10;
+        &:last-child {
+          top: 1300px;
+          left: 20px;
+          width: 300px;
+          height: 300px;
+          opacity: 0.4;
+          background-color: #00cc99;
+          border-radius: 300px;
+          box-shadow: 5px 5px 15px rgba($color: #a8a9ad, $alpha: .6);
+        }
+      }
+    }
+    .contact {
+      position: relative;
+      width: 100vw;
+      height: 140vh;
+      margin: 200px auto 200px;
+      .contact-section {
+        position: relative;
+        margin: 150px auto 0;
+        .contact-title {
+          position: relative;
+          font-weight: 800;
+          font-size: 42px;
+        }
+        .contact-list {
+          position: relative;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: center;
+          .kakaotalk {
+            position: relative;
+            width: 300px;
+            .kakaotalk-title,
+            .kakaotalk-image {
+              font-weight: 500;
+              font-size: 20px;
+              margin: 20px auto 50px;
+            }
+            .kakaotalk-desc {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              text-align: center;
+            }
+          }
+          .email-title {
+            width: 90vw;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            margin: 20px auto 50px;
+          }
+          .contact-form {
+            * {box-sizing: border-box;}
+  
+            display: block;
+            margin:auto;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+            p {
+              font-size: 10px;
+              margin-bottom: 5px;
+              text-align: right;
+              color: red;
+            }
+            label {
+              float: left;
+            }
+            input[type=text], [type=email], textarea {
+              width: 100%;
+              padding: 12px;
+              border: none;
+              border-radius: 10px;
+              border-bottom: 1px solid #393432;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              background-color: #fbfbfb;
+              resize: vertical;
+            }
+            input[type=submit] {
+              background-color: #fbab60;
+              color: #fefdfa;
+              padding: 10px 16px;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+            }
+            input[type=submit]:hover {
+              background-color: #ffc377;
+            }
+            input[type=submit]:active {
+              background-color: #ed9f55;
+            }
+          }
+        }
+      }
+    }
+  }
+  

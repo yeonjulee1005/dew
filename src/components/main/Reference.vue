@@ -1,0 +1,269 @@
+<template>
+  <div class="flex flex-column reference-section">
+    <div class="flex flex-column">
+      <div class="section-title ml-50">
+        {{ title.main }}
+      </div>
+      <div class="section-bg-text">
+        {{ title.background }}
+      </div>
+      <div class="section-text">
+        {{ title.desc }}
+      </div>
+    </div>
+    <el-row class="reference-list">
+      <el-col :span="8" class="reference-column">
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.avrosoft.img"
+              :alt="items.avrosoft.title"
+              @click="onClickDialog(this.items.avrosoft.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.avrosoft.title }}
+          </div>
+        </el-row>
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.doowon.img"
+              :alt="items.doowon.title"
+              @click="onClickDialog(this.items.doowon.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.doowon.title }}
+          </div>
+          </el-row>
+      </el-col>
+      <el-col :span="8" class="reference-column">
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.invenia.img"
+              :alt="items.invenia.title"
+              @click="onClickDialog(this.items.invenia.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.invenia.title }}
+          </div>
+        </el-row>
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.orijen.img"
+              :alt="items.orijen.title"
+              @click="onClickDialog(this.items.orijen.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.orijen.title }}
+          </div>
+        </el-row>
+      </el-col>
+      <el-col :span="8" class="reference-column">
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.wuzo.img"
+              :alt="items.wuzo.title"
+              @click="onClickDialog(this.items.wuzo.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.wuzo.title }}
+          </div>
+        </el-row>
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.bega.img"
+              :alt="items.bega.title"
+              @click="onClickDialog(this.items.bega.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.bega.title }}
+          </div>
+        </el-row>
+      </el-col>
+    </el-row>
+  </div>
+  <div class="reference-background" />
+  <div class="reference-background" />
+  <GDialog v-model="dialogState" height="90vh" width="90vw" transition="gdialog-transition" depressed>
+    <div class="g-dialog flex flex-column">
+      <div class="flex flex-justify-end mt-10 mr-10">
+        <el-button round class="cursor" plain color="#bfc1c2" @click="dialogState = false">
+          <el-icon class="fas fa-times" />
+        </el-button>
+      </div>
+      <div class=" dialog-images flex flex-justify-center flex-column">
+        <div v-for="(item, index) in dialogItems" :key="index">
+          {{ item.title }}
+        </div>
+        <div v-for="(item, index) in dialogItems" :key="index">
+          {{ item.desc }}
+        </div>
+        <img class="dialog-image" v-for="(image, index) in dialogItems" :key="index" :src="image.img" style="width:90vw"/>
+      </div>
+    </div>
+  </GDialog>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  name: 'Reference',
+  setup () {
+    const dialogState = ref(false)
+    return {
+      dialogState
+    }
+  },
+  data () {
+    return {
+      title: {
+        main: '프로젝트',
+        background: 'PROJECTS',
+        desc: '개발 및 유지보수를 진행한 대표사례 입니다.'
+      },
+      items: {
+        avrosoft: {
+          title: '아브로소프트코리아',
+          img: require('../../assets/img/references/avrosoft.png'),
+          alt: 'avro'
+        },
+        doowon: {
+          title: '두원실업',
+          img: require('../../assets/img/references/doowon.png'),
+          alt: 'doowon'
+        },
+        invenia: {
+          title: '인베니아',
+          img: require('../../assets/img/references/invenia.png'),
+          alt: 'invenia'
+        },
+        orijen: {
+          title: '오리젠',
+          img: require('../../assets/img/references/orijen.png'),
+          alt: 'orijen'
+        },
+        wuzo: {
+          title: '우조',
+          img: require('../../assets/img/references/wuzo.png'),
+          alt: 'wuzo'
+        },
+        bega: {
+          title: '베가',
+          img: require('../../assets/img/references/bega.png'),
+          alt: 'bega'
+        }
+      },
+      referenceLists: '',
+      dialogItems: Array<{title: string, desc: string, img: string}>()
+    }
+  },
+  watch: {
+    dialogState () {
+      const state = this.dialogState
+      if (state) {
+        this.onClickDialog
+      } else {
+        this.referenceLists = ''
+      }
+    }
+  },
+  methods: {
+    onClickDialog (val: any) {
+      this.dialogState = true
+      this.referenceLists = val
+      switch (val) {
+        case 'avro':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '아브로소프트코리아',
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            img: require('../../assets/img/references/details/avrosoft-detail.jpg')
+            })
+          break
+        case 'doowon':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '두원실업',
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            img: require('../../assets/img/references/details/doowon-detail.jpg')
+            })
+          break
+        case 'invenia':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '인베니아',
+            desc: '' ,
+            img: require('../../assets/img/references/details/invenia-detail.jpg')
+            })
+          break
+        case 'orijen':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '오리젠코리아',
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            img: require('../../assets/img/references/details/orijen-detail.jpg')
+            })
+          this.dialogItems.push({
+            title: '',
+            desc: '' ,
+            img: require('../../assets/img/references/details/orijen-detail1.jpg')
+            })
+          break
+        case 'wuzo':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '우조엔터테인먼트',
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            img: require('../../assets/img/references/details/wuzo-detail.jpg')
+            })
+          this.dialogItems.push({
+            title: '',
+            desc: '' ,
+            img: require('../../assets/img/references/details/wuzo-detail1.jpg')
+            })
+          break
+        case 'bega':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '배가',
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            img: require('../../assets/img/references/details/bega-detail.jpg')
+            })
+          break
+      }
+    }
+  }
+})
+</script>
+
+<style lang="scss">
+.g-dialog-transition {
+  &-enter-active,
+  &-leave-active {
+    transition-timing-function: linear;
+    transition-duration: .2s;
+  }
+  &-enter-from {
+    transform: translate(0, -30px);
+    opacity: 0;
+    transition-duration: .5s;
+  }
+
+  &-leave-to {
+    transform: translate(0, 30px);
+    opacity: 0;
+    transition-duration: .5s;
+  }
+}
+</style>

@@ -45,4 +45,4 @@ jobs:
         uses: w9jds/firebase-artifact@main
         with:
           args: deploy --only
-          FIREBASE_TOKEN: ${{ 1//0eJcvaiRuXMLbCgYIARAAGA4SNwF-L9IrbE9durHIICKcnGFTlNXnxH0XseOu4twijCnyJsAIokq3BxciCkhN10ujWs7wI-jDv-Q }}
+          FIREBASE_TOKEN: ${{ FIREBASE_TOKEN }}

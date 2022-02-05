@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 import Footer from '@/components/footer.vue'
 import Glightbox from 'glightbox'
 import 'glightbox/dist/css/glightbox.css'

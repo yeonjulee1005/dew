@@ -168,18 +168,9 @@ export default defineComponent({
       dialogItems: Array<{title: string, desc: string, img: string}>()
     }
   },
-  watch: {
-    dialogState () {
-      const state = this.dialogState
-      if (state) {
-        this.onClickDialog
-      } else {
-        this.referenceLists = ''
-      }
-    }
-  },
   methods: {
-    onClickDialog (val: any) {
+    onClickDialog (val: string) {
+      console.log(val)
       this.dialogState = true
       this.referenceLists = val
       switch (val) {
@@ -189,57 +180,57 @@ export default defineComponent({
             title: '아브로소프트코리아',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
             img: require('../../assets/img/references/details/avrosoft-detail.jpg')
-            })
+          })
           break
         case 'doowon':
           this.dialogItems = []
           this.dialogItems.push({
             title: '두원실업',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
             img: require('../../assets/img/references/details/doowon-detail.jpg')
-            })
+          })
           break
         case 'invenia':
           this.dialogItems = []
           this.dialogItems.push({
             title: '인베니아',
-            desc: '' ,
+            desc: '',
             img: require('../../assets/img/references/details/invenia-detail.jpg')
-            })
+          })
           break
         case 'orijen':
           this.dialogItems = []
           this.dialogItems.push({
             title: '오리젠코리아',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
             img: require('../../assets/img/references/details/orijen-detail.jpg')
-            })
+          })
           this.dialogItems.push({
             title: '',
-            desc: '' ,
+            desc: '',
             img: require('../../assets/img/references/details/orijen-detail1.jpg')
-            })
+          })
           break
         case 'wuzo':
           this.dialogItems = []
           this.dialogItems.push({
             title: '우조엔터테인먼트',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
             img: require('../../assets/img/references/details/wuzo-detail.jpg')
-            })
+          })
           this.dialogItems.push({
             title: '',
-            desc: '' ,
+            desc: '',
             img: require('../../assets/img/references/details/wuzo-detail1.jpg')
-            })
+          })
           break
         case 'bega':
           this.dialogItems = []
           this.dialogItems.push({
             title: '배가',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.' ,
+            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
             img: require('../../assets/img/references/details/bega-detail.jpg')
-            })
+          })
           break
       }
     }

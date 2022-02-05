@@ -17,15 +17,16 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  mounted() {
+  mounted () {
     this.addHiddenClass()
   },
   methods: {
     addHiddenClass () {
-      document.getElementById('nav')?.classList.add('hidden-nav')
+      console.log(this.$refs.navigation)
+      // document.getElementById('nav').classList.add('hidden-nav')
     },
     removeHiddenClass () {
-      document.getElementById('nav')?.classList.remove('hidden-nav')
+      // document.getElementById('nav')?.classList.remove('hidden-nav')
     }
   }
 })

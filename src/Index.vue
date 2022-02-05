@@ -1,5 +1,5 @@
 <template>
-  <div class="header flex z-100" id="nav">
+  <div class="header flex z-100" id="nav" ref="navigation">
     <div class="flex logo">
       <router-link to="/">
         <img class="logo-img" :src="logo.img" :alt="logo.alt">
@@ -45,11 +45,11 @@ export default defineComponent({
         img: require('./assets/img/dewdew_logo.png'),
         alt: 'logo'
       },
-      projects: { name: 'Projects' ,url: '/projects' },
-      dlogs : { name: 'D. Log', url: '/dLog' }
+      projects: { name: 'Projects', url: '/projects' },
+      dlogs: { name: 'D. Log', url: '/dLog' }
     }
   }
-});
+})
 
 </script>
 

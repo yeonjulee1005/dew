@@ -19,7 +19,6 @@
   </div>
 </template>
 
-
 <script lang="ts">
 import { defineComponent } from 'vue'
 
@@ -28,67 +27,67 @@ export default defineComponent({
     return {
       css: {
         title: 'css3',
-        img: require('../../assets/img/logos/css3.png')
+        img: require('@/assets/img/logos/css3.png')
       },
       html: {
         title: 'html5',
-        img: require('../../assets/img/logos/html5.png')
+        img: require('@/assets/img/logos/html5.png')
       },
       github: {
         title: 'github',
-        img: require('../../assets/img/logos/github.png')
+        img: require('@/assets/img/logos/github.png')
       },
       node: {
         title: 'node',
-        img: require('../../assets/img/logos/node.png')
+        img: require('@/assets/img/logos/node.png')
       },
       illustration: {
         title: 'illustration',
-        img: require('../../assets/img/logos/illustration.png')
+        img: require('@/assets/img/logos/illustration.png')
       },
       xd: {
         title: 'xd',
-        img: require('../../assets/img/logos/xd.png')
+        img: require('@/assets/img/logos/xd.png')
       },
       javascript: {
         title: 'javascript',
-        img: require('../../assets/img/logos/JavaScript.png')
+        img: require('@/assets/img/logos/JavaScript.png')
       },
       typescript: {
         title: 'typescript',
-        img: require('../../assets/img/logos/TypeScript.png')
+        img: require('@/assets/img/logos/TypeScript.png')
       },
       nuxt: {
         title: 'nuxt',
-        img: require('../../assets/img/logos/nuxt.png')
+        img: require('@/assets/img/logos/nuxt.png')
       },
       pgadmin: {
         title: 'pgadmin',
-        img: require('../../assets/img/logos/pgadmin.png')
+        img: require('@/assets/img/logos/pgadmin.png')
       },
       postman: {
         title: 'postman',
-        img: require('../../assets/img/logos/postman.png')
+        img: require('@/assets/img/logos/postman.png')
       },
       python: {
         title: 'python',
-        img: require('../../assets/img/logos/python.png')
+        img: require('@/assets/img/logos/python.png')
       },
       sass: {
         title: 'sass',
-        img: require('../../assets/img/logos/sass.png')
+        img: require('@/assets/img/logos/sass.png')
       },
       vim: {
         title: 'vim',
-        img: require('../../assets/img/logos/vim.png')
+        img: require('@/assets/img/logos/vim.png')
       },
       vscode: {
         title: 'vscode',
-        img: require('../../assets/img/logos/vscode.png')
+        img: require('@/assets/img/logos/vscode.png')
       },
       vue: {
         title: 'vue',
-        img: require('../../assets/img/logos/vue.png')
+        img: require('@/assets/img/logos/vue.png')
       }
     }
   }

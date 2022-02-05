@@ -135,32 +135,32 @@ export default defineComponent({
       items: {
         avrosoft: {
           title: '아브로소프트코리아',
-          img: require('../../assets/img/references/avrosoft.png'),
+          img: require('@/assets/img/references/avrosoft.png'),
           alt: 'avro'
         },
         doowon: {
           title: '두원실업',
-          img: require('../../assets/img/references/doowon.png'),
+          img: require('@/assets/img/references/doowon.png'),
           alt: 'doowon'
         },
         invenia: {
           title: '인베니아',
-          img: require('../../assets/img/references/invenia.png'),
+          img: require('@/assets/img/references/invenia.png'),
           alt: 'invenia'
         },
         orijen: {
           title: '오리젠',
-          img: require('../../assets/img/references/orijen.png'),
+          img: require('@/assets/img/references/orijen.png'),
           alt: 'orijen'
         },
         wuzo: {
           title: '우조',
-          img: require('../../assets/img/references/wuzo.png'),
+          img: require('@/assets/img/references/wuzo.png'),
           alt: 'wuzo'
         },
         bega: {
           title: '베가',
-          img: require('../../assets/img/references/bega.png'),
+          img: require('@/assets/img/references/bega.png'),
           alt: 'bega'
         }
       },
@@ -179,7 +179,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '아브로소프트코리아',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            img: require('../../assets/img/references/details/avrosoft-detail.jpg')
+            img: require('@/assets/img/references/details/avrosoft-detail.jpg')
           })
           break
         case 'doowon':
@@ -187,7 +187,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '두원실업',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            img: require('../../assets/img/references/details/doowon-detail.jpg')
+            img: require('@/assets/img/references/details/doowon-detail.jpg')
           })
           break
         case 'invenia':
@@ -195,7 +195,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '인베니아',
             desc: '',
-            img: require('../../assets/img/references/details/invenia-detail.jpg')
+            img: require('@/assets/img/references/details/invenia-detail.jpg')
           })
           break
         case 'orijen':
@@ -203,12 +203,12 @@ export default defineComponent({
           this.dialogItems.push({
             title: '오리젠코리아',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            img: require('../../assets/img/references/details/orijen-detail.jpg')
+            img: require('@/assets/img/references/details/orijen-detail.jpg')
           })
           this.dialogItems.push({
             title: '',
             desc: '',
-            img: require('../../assets/img/references/details/orijen-detail1.jpg')
+            img: require('@/assets/img/references/details/orijen-detail1.jpg')
           })
           break
         case 'wuzo':
@@ -216,12 +216,12 @@ export default defineComponent({
           this.dialogItems.push({
             title: '우조엔터테인먼트',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            img: require('../../assets/img/references/details/wuzo-detail.jpg')
+            img: require('@/assets/img/references/details/wuzo-detail.jpg')
           })
           this.dialogItems.push({
             title: '',
             desc: '',
-            img: require('../../assets/img/references/details/wuzo-detail1.jpg')
+            img: require('@/assets/img/references/details/wuzo-detail1.jpg')
           })
           break
         case 'bega':
@@ -229,7 +229,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '배가',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            img: require('../../assets/img/references/details/bega-detail.jpg')
+            img: require('@/assets/img/references/details/bega-detail.jpg')
           })
           break
       }

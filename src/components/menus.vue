@@ -1,5 +1,5 @@
 <template>
-  <div class="header flex z-100" id="nav" ref="navigation">
+  <div class="header flex z-100">
     <div class="flex logo">
       <router-link to="/">
         <img class="logo-img" :src="logo.img" :alt="logo.alt">
@@ -35,7 +35,7 @@ export default defineComponent({
   data () {
     return {
       logo: {
-        img: require('../assets/img/dewdew_logo.png'),
+        img: require('@/assets/img/dewdew_logo.png'),
         alt: 'logo'
       },
       projects: { name: 'Projects', url: '/projects' },

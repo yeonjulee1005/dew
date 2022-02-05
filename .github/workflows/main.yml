@@ -29,20 +29,20 @@ jobs:
       with:
         name: dist
         path: dist
-deploy:
-  name: Deploy
-  needs: blild
-  runs-on: ubuntu-lastest
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@main
-    - name: Download artifact
-      uses: actions/download-artifact@main
-      with:
-        name: dist
-        path: dist
-    - name: Deploy to Firebase
-      uses: w9jds/firebase-artifact@main
-      with:
-        args: deploy --only
-        FIREBASE_TOKEN: ${{ 1//0eJcvaiRuXMLbCgYIARAAGA4SNwF-L9IrbE9durHIICKcnGFTlNXnxH0XseOu4twijCnyJsAIokq3BxciCkhN10ujWs7wI-jDv-Q }}
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: dist
+          path: dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-artifact@main
+        with:
+          args: deploy --only
+          FIREBASE_TOKEN: ${{ 1//0eJcvaiRuXMLbCgYIARAAGA4SNwF-L9IrbE9durHIICKcnGFTlNXnxH0XseOu4twijCnyJsAIokq3BxciCkhN10ujWs7wI-jDv-Q }}

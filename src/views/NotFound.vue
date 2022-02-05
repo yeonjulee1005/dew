@@ -18,11 +18,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   mounted () {
-    this.addHiddenClass()
+    // this.addHiddenClass()
   },
   methods: {
     addHiddenClass () {
-      console.log(this.$refs.navigation)
+      // console.log(this.$refs)
       // document.getElementById('nav').classList.add('hidden-nav')
     },
     removeHiddenClass () {

@@ -1,6 +1,6 @@
 <template>
   <div class="Main">
-    <Menu />
+    <Menus />
     <el-row class="content">
       <MainIntro />
     </el-row>
@@ -16,6 +16,7 @@
     <el-row class="contact">
       <Contact />
     </el-row>
+    <el-backtop />
     <Footer />
   </div>
 </template>
@@ -27,13 +28,13 @@ import Resume from '@/components/main/Resume.vue'
 import Skills from '@/components/main/Skills.vue'
 import Reference from '@/components/main/Reference.vue'
 import Contact from '@/components/main/contact.vue'
-import Menu from '@/components/menu.vue'
+import Menus from '@/components/menus.vue'
 import Footer from '@/components/footer.vue'
 
 export default defineComponent({
   name: 'Main',
   components: {
-    MainIntro, Resume, Skills, Reference, Contact, Menu, Footer
+    MainIntro, Resume, Skills, Reference, Contact, Menus, Footer
   },
   data () {
     return {

@@ -55,41 +55,41 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   data () {
     return {
-      resumeImg: require('../../assets/img/resume_img.jpg'),
+      resumeImg: require('@/assets/img/resume_img.jpg'),
       career: {
         title: '경력사항',
-        desc: '경희대학교 서울캠퍼스 물리학과 졸업 (' + `'`+ '06)'
+        desc: '경희대학교 서울캠퍼스 물리학과 졸업 (' + '\'' + '06)'
       },
       touchWell: {
         title: '터치웰',
         desc: ' 🖋️임베디드 소프트웨어 개발'
-        },
+      },
       bega: {
         title: 'BEGA',
         desc: ' 🖋️️사내 웹페이지 유지보수 및 플라즈마 장비 소프트웨어 개발'
-        },
+      },
       invenia: {
         title: '인베니아',
         desc: ' 🖋️️사내 웹페이지 유지보수 및 Inspector 시스템 개발'
-        },
+      },
       keyDesign: {
         title: '키디자인',
         desc: ' 🖋️️자사몰 개발 및 유지보수'
-        },
+      },
       beatRoad: {
         title: '비트로드',
         desc: ' 🖋️️자사 사이트,자사몰 개발 및 유지보수'
-        },
+      },
       dooWon: {
         title: '두원실업',
         desc1: ' 🖋️️자사 및 본사 웹페이지 번역사이트 유지보수 및 개발'
-        },
+      },
       avroSoft: {
         title: '아브로소프트',
-        desc: ' 🖋️️FE' + `&`+ 'BE 웹개발 및 Web Design'
-        }
+        desc: ' 🖋️️FE' + '&' + 'BE 웹개발 및 Web Design'
       }
     }
   }
+}
 )
 </script>

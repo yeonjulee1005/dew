@@ -40,7 +40,7 @@ export default defineComponent({
       kakaotalk: {
         title: 'Kakao Talk',
         link: 'https://namecard.kakao.com/dewdew',
-        img: require('../../assets/img/kakao_medium.png'),
+        img: require('@/assets/img/kakao_medium.png'),
         desc: '카카오톡으로 연락하기'
       },
       email: 'E-Mail'

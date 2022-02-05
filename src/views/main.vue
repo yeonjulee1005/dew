@@ -21,13 +21,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MainIntro from '@/components/main/MainIntro.vue'  // @ is an alias to /src
+import MainIntro from '@/components/main/MainIntro.vue' // @ is an alias to /src
 import Resume from '@/components/main/Resume.vue'
 import Skills from '@/components/main/Skills.vue'
 import Reference from '@/components/main/Reference.vue'
 import Contact from '@/components/main/contact.vue'
 import Footer from '@/components/footer.vue'
-
 
 export default defineComponent({
   name: 'Main',

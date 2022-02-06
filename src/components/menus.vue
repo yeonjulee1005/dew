@@ -6,8 +6,8 @@
       </router-link>
     </div>
     <div class="desktop-menu flex">
-      <router-link class="menu-text" :to="projects.url">{{ projects.name }}</router-link>
-      <router-link class="menu-text ml-50" :to="dlogs.url">{{ dlogs.name }}</router-link>
+      <router-link class="menu-text" :to="dlogs.url">{{ dlogs.name }}</router-link>
+      <router-link class="menu-text ml-50" :to="projects.url">{{ projects.name }}</router-link>
     </div>
     <div class="mobile-menu">
       <el-menu background-color="transparent">
@@ -16,10 +16,10 @@
             <el-icon class="fas fa-bars" :size="40"></el-icon>
           </template>
           <el-menu-item index="1-1">
-            <router-link class="menu-text" :to="projects.url">{{ projects.name }}</router-link>
+            <router-link class="menu-text" :to="dlogs.url">{{ dlogs.name }}</router-link>
           </el-menu-item>
           <el-menu-item index="1-2">
-            <router-link class="menu-text" :to="dlogs.url">{{ dlogs.name }}</router-link>
+            <router-link class="menu-text" :to="projects.url">{{ projects.name }}</router-link>
           </el-menu-item>
         </el-sub-menu>
       </el-menu>

@@ -438,4 +438,111 @@
         }
       }
     }
+    .dLog {
+      position: relative;
+      width: 100vw;
+      height: 70vh;
+      .slider-section {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 1000px;
+        height: 350px;
+        top: 55%;
+        left: 50%;
+        overflow: hidden;
+        transform: translateX(-50%) translateY(-50%);
+        .keen-slider {
+          width: 900px;
+          margin: 0 auto;
+          padding: 10px 0;
+          .keen-slider__slide {
+            border-radius: 50px;
+            box-shadow: 3px 3px 5px #000;
+          }
+        }
+      }
+
+      [class^="keen-slider__slide"],
+      [class*="keen-slider__slide"] {
+        background: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 2.5em;
+        color: #fff;
+        font-weight: 700;
+        width: 300px;
+        height: 300px;
+        max-height: 100vh;
+        .slide {
+          display: unset;
+          height: 100%;
+
+          .slide-desc {
+            position: absolute;
+            right: 0;
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 0.9em;
+            margin-right: 30px;
+            bottom: 10px;
+            span {
+              display: flex;
+              justify-content: flex-end;
+              color: #fff;
+            }
+          }
+          .slide-desc-reverse {
+            position: absolute;
+            left: 0;
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 0.9em;
+            margin-left: 30px;
+            bottom: 10px;
+            span {
+              display: flex;
+              justify-content: flex-start;
+              color: #fff;
+            }
+          }
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .logs-slider {
+      .slide-page {
+        position: relative;
+        width: 100vw;
+        height: 70vh;
+        .slider-section {
+          position: absolute;
+          width: 1200px;
+          top: 55%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+        .slides {
+          display: inline-flex;
+          width: 1200px;
+          .keen-slider {
+            padding: 10px 0;
+            .slide {
+              border-radius: 50px;
+              box-shadow: 3px 3px 5px #000;
+              .slide-image {
+                height: 300px;
+                width: 800px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
   }

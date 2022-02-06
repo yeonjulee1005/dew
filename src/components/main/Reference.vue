@@ -243,18 +243,18 @@ export default defineComponent({
   &-enter-active,
   &-leave-active {
     transition-timing-function: linear;
-    transition-duration: .2s;
+    transition-duration: 1s;
   }
   &-enter-from {
     transform: translate(0, -30px);
     opacity: 0;
-    transition-duration: .5s;
+    transition-duration: 1s;
   }
 
   &-leave-to {
     transform: translate(0, 30px);
     opacity: 0;
-    transition-duration: .5s;
+    transition-duration: 1s;
   }
 }
 </style>

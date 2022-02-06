@@ -1,13 +1,30 @@
 <template>
-  <div>
+  <div class="logs-slider">
     <Menus />
     <div class="slide-page">
       <div class="slider-section">
+        <el-button class="fas fa-angle-left" round @click="routerBack">
+          &ensp;Prev Page
+        </el-button>
         <div class="slides">
-          <div ref="container" class="keen-slider">
-            <div class="keen-slider__slide" v-for="(item, index) in items" :key="index">
-              <a :href="item.img" class="glightbox">
-                <img :src="item.img" alt="image" />
+          <div
+            ref="container"
+            class="keen-slider"
+          >
+            <div
+              class="keen-slider__slide slide"
+              v-for="(item, index) in items"
+              :key="index"
+            >
+              <a
+                :href="item.img"
+                class="glightbox"
+              >
+                <img
+                  class="slide-image"
+                  :src="item.img"
+                  alt="image"
+                />
               </a>
             </div>
           </div>
@@ -63,7 +80,23 @@ export default defineComponent({
       loop: true,
       slides: {
         perView: 3,
-        spacing: 60
+        spacing: 30
+      },
+      breakpoints: {
+        '(max-width: 1199px)': {
+          slides: {
+            perView: 2,
+            spacing: 60
+          },
+          loop: true
+        },
+        '(max-width: 767px)': {
+          slides: {
+            perView: 1,
+            spacing: 60
+          },
+          loop: true
+        }
       },
       mode: 'free',
       renderMode: 'performance',
@@ -81,62 +114,11 @@ export default defineComponent({
     return {
       container
     }
+  },
+  methods: {
+    routerBack () {
+      this.$router.push('/dLog')
+    }
   }
 })
 </script>
-
-<style lang="scss">
-  .slide-page {
-    position: relative;
-    width: 100vw;
-    height: 70vh;
-    .slider-section {
-      position: absolute;
-      width: auto;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    }
-    .slides {
-      display: inline-flex;
-    }
-  }
-
-[class^="number-slide"],
-[class*="number-slide"] {
-  background: grey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 2.5em;
-  color: #fff;
-  font-weight: 700;
-  width: 300px;
-  height: 300px;
-  max-height: 100vh;
-  .slide {
-    display: unset;
-    height: 100%;
-    img {
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-.number-slide1 {
-  border-radius: 50px;
-  box-shadow: 3px 3px 5px #000;
-}
-
-.number-slide2 {
-  border-radius: 50px;
-  box-shadow: 3px 3px 5px #000;
-}
-
-.number-slide3 {
-  border-radius: 50px;
-  box-shadow: 3px 3px 5px #000;
-}
-</style>

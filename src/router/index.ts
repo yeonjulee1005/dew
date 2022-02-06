@@ -21,6 +21,30 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "dLog" */ '../views/dLog.vue')
   },
   {
+    path: '/dLog/2019',
+    name: '2019',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "dLog" */ '../views/dlog/2019.vue')
+  },
+  {
+    path: '/dLog/2020',
+    name: '2020',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "dLog" */ '../views/dlog/2020.vue')
+  },
+  {
+    path: '/dLog/2021',
+    name: '2021',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "dLog" */ '../views/dlog/2021.vue')
+  },
+  {
     path: '/:pathMatch(.*)',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue')

@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "core-js": "^3.6.5",
     "element-plus": "^1.3.0-beta.8",
+    "firebase-tools": "^10.1.4",
     "gitart-vue-dialog": "^1.2.3",
     "glightbox": "^3.1.0",
     "gsap": "^3.9.1",

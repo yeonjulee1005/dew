@@ -48,7 +48,7 @@ export default defineComponent({
       },
       dlog: {
         title: 'D.Log',
-        url: '/dLog'
+        url: '/dlog'
       },
       copyright: 'Copyright © Yeonju Lee All Rights Reserved.',
       designed: 'Designed by Yeonju Lee.'

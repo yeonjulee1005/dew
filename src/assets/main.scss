@@ -94,22 +94,6 @@ a.menu-text {
 
 .bold { font-weight: bold; }
 
-
-
-.Main {
-  position: relative;
-  width: 100vw;
-  height: 70vh;
-  .content {
-    background: url(./img/main_banner.jpg) no-repeat center center fixed;
-    width: 100vw;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
 .NotFound {
   position: absolute;
   width: 100%;

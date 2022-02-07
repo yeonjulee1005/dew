@@ -33,6 +33,7 @@
         {{ scroll_down }}
       </div>
     </transition>
+    <el-image class="main-image" :src="image" />
   </div>
 </template>
 
@@ -48,7 +49,8 @@ export default defineComponent({
       mainText_1: '노력하는 사람은 즐기는 사람을 이길 수 없습니다.',
       mainText_2: '개발과 취미를 즐기며 살아가고 있는 개발자 이연주입니다.',
       notice: '본 페이지는' + ' \'' + 'Vue 3' + ' & ' + 'TypeScript' + '\'' + '으로 제작되었습니다.',
-      scroll_down: '👇🏻Scroll Down'
+      scroll_down: '👇🏻Scroll Down',
+      image: require('@/assets/img/main_banner.jpg')
     }
   },
   setup () {

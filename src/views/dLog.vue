@@ -1,7 +1,7 @@
 <template>
   <div>
     <Menus />
-    <div class="dLog">
+    <div class="dlog">
       <div class="slider-section">
         <div
           ref="container"
@@ -49,7 +49,7 @@ import { spaceProps } from 'element-plus'
 const animation = { duration: 50000, easing: (t) => t * 4 }
 
 export default defineComponent({
-  title: 'dLog',
+  title: 'dlog',
   components: {
     Menus, Footer
   },

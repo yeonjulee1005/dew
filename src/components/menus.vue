@@ -39,7 +39,7 @@ export default defineComponent({
         alt: 'logo'
       },
       projects: { name: 'Projects', url: '/projects' },
-      dlogs: { name: 'D. Log', url: '/dLog' }
+      dlogs: { name: 'D. Log', url: '/dlog' }
     }
   }
 })

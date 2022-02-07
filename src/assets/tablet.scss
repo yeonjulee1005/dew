@@ -16,17 +16,28 @@
       }
     }
     .Main {
+      position: relative;
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
       .content {
         position: relative;
         width: 100vw;
-        height: 100vh;
+        height: auto;
+        max-height: 700px;
         margin: 0 auto;
+        overflow: hidden;
+        .main-image {
+          height: auto;
+          width: 100vw;
+          object-fit: cover;
+        }
         .main-title {
           position: absolute;
           width: 200px;
-          bottom: unset;
           right: 10%;
-          font-size: 4em;
+          padding: 80px 0 80px;
+          font-size: 6em;
           line-height: 1em;
           font-weight: bold;
           text-align: right;
@@ -36,36 +47,39 @@
         }
         .main-text {
           position: absolute;
-          top: 50%;
+          top: 55%;
           left: 10%;
           width: 650px;
           font-weight: 600;
           font-size: 1.3em;
           line-height: 1.6em;
           color: #fcfcfc;
+          z-index: 10;
         }
         .little-text {
           font-size: .8em;
           font-weight: 500;
           color: #fcfcfc;
+          z-index: 10;
         }
       }
       .scroll-down {
         position: absolute;
         width: 15vw;
-        height: 100vh;
-        top: 90%;
+        bottom: 0;
+        padding-bottom: 5%;
         left: 45%;
         color: #fcfcfc;
         font-size: 14px;
         font-weight: 400;
+        z-index: 10;
       }
     }
     .resume {
       position: relative;
       width: 95vw;
       height: 40vh;
-      margin: 80px auto 200px;
+      margin: 200px auto 200px;
   
       .resume-contents {
         justify-content: center;
@@ -447,7 +461,7 @@
         }
       }
     }
-    .dLog {
+    .dlog {
       position: relative;
       width: 768px;
       margin: 0 auto;

@@ -14,16 +14,27 @@
       }
     }
     .Main {
+      position: relative;
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
       .content {
         position: relative;
-        width: 1200px;
-        height: 100vh;
+        width: 100vw;
+        height: 700px;
         margin: 0 auto;
+        overflow: hidden;
+        .main-image {
+          height: auto;
+          width: 100vw;
+          object-fit: cover;
+        }
         .main-title {
           position: absolute;
           width: 200px;
-          top: 0px !important;
+          top: 0px;
           right: 10%;
+          padding-top: 100px;
           font-size: 7em;
           line-height: 95px;
           font-weight: 900;
@@ -41,6 +52,7 @@
           font-size: 26px;
           line-height: 34px;
           color: #fcfcfc;
+          z-index: 10;
         }
         .little-text {
           font-size: 14px;
@@ -51,19 +63,21 @@
       .scroll-down {
         position: absolute;
         width: 10vw;
-        height: 100vh;
-        top: 93%;
+        height: 100%;
+        top: 92%;
         left: 50%;
+        transform: translateY(-50%), translateX(-50%);
         font-size: 14px;
         font-weight: 400;
         color: #fcfcfc;
+        z-index: 10;
       }
     }
     .resume {
       position: relative;
       width: 1200px;
       height: 55vh;
-      margin: 80px auto 200px;
+      margin: 250px auto 200px;
   
       .resume-contents {
         justify-content: center;
@@ -438,7 +452,7 @@
         }
       }
     }
-    .dLog {
+    .dlog {
       position: relative;
       width: 100vw;
       height: 70vh;

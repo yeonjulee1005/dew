@@ -117,7 +117,7 @@ export default defineComponent({
   },
   methods: {
     routerBack () {
-      this.$router.push('/dLog')
+      this.$router.push('/dlog')
     }
   }
 })

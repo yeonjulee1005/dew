@@ -17,18 +17,26 @@
       }
     }
     .Main {
+      position: relative;
       width: 100vw;
-      height: 70vh;
+      height: 100%;
+      overflow: hidden;
       .content {
         position: relative;
         width: 100vw;
-        height: 100vh;
-        margin: 0 auto 20vh;
-        background-image: url(./img/main_banner_mobile.jpg) !important;
+        height: auto;
+        max-height: 700px;
+        margin: 0 auto;
+        overflow: hidden;
+        .main-image {
+          height: auto;
+          width: 100vw;
+          object-fit: cover;
+        }
         .main-title {
           position: absolute;
           width: 200px;
-          bottom: unset;
+          padding: 80px 0 80px;
           right: 3%;
           font-size: 4em;
           line-height: 1em;
@@ -40,19 +48,21 @@
         }
         .main-text {
           position: absolute;
-          top: 50%;
+          top: 45%;
           left: 3%;
-          width: 60vw;
+          width: 65vw;
           font-weight: 600;
-          font-size:1.2em;
+          font-size:1em;
           line-height: 1.4em;
           word-break: keep-all;
           color: #fcfcfc;
+          z-index: 10;
         }
         .little-text {
-          font-size: 0.8em;
+          font-size: 0.7em;
           font-weight: 500;
           color: #fcfcfc;
+          z-index: 10;
         }
       }
       .scroll-down {
@@ -60,11 +70,12 @@
         width: 30vw;
         height: 100vh;
         margin: 0 auto;
-        top: 90%;
+        top: 85%;
         left: 40%;
         color: #fcfcfc;
         font-size: 0.8em;
         font-weight: 400;
+        z-index: 10;
       }
     }
     .resume {
@@ -74,7 +85,7 @@
       flex-direction: column;
       flex-wrap: nowrap !important;
       align-items: center;
-      margin: 80px auto 100px;
+      margin: 200px auto 100px;
   
       .resume-contents {
         justify-content: center;
@@ -502,7 +513,7 @@
         }
       }
     }
-    .dLog {
+    .dlog {
       position: relative;
       width: 80vw;
       margin: 0 auto;

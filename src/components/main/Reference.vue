@@ -101,14 +101,29 @@
           <el-icon class="fas fa-times" />
         </el-button>
       </div>
-      <div class=" dialog-images flex flex-justify-center flex-column">
-        <div v-for="(item, index) in dialogItems" :key="index">
+      <div
+        v-for="(item, keys) in dialogItems"
+        :key="keys"
+        class=" dialog-images flex flex-justify-center flex-column"
+      >
+        <div
+          class="dialog-title ml-30"
+          style="font-size: 1.5em; font-weight: 700;"
+        >
           {{ item.title }}
         </div>
-        <div v-for="(item, index) in dialogItems" :key="index">
+        <div
+          class="dialog-desc ml-30 mt-20 mb-20"
+          style="font-size: 1.2em;"
+        >
           {{ item.desc }}
         </div>
-        <img class="dialog-image" v-for="(image, index) in dialogItems" :key="index" :src="image.img" style="width:90vw"/>
+        <img
+          class="dialog-image cursor"
+          :src="item.img"
+          style="width:90vw;"
+          @click="openReference(item.url)"
+        />
       </div>
     </div>
   </GDialog>
@@ -165,12 +180,11 @@ export default defineComponent({
         }
       },
       referenceLists: '',
-      dialogItems: Array<{title: string, desc: string, img: string}>()
+      dialogItems: Array<{title: string, desc: string, url: string, img: string}>()
     }
   },
   methods: {
     onClickDialog (val: string) {
-      console.log(val)
       this.dialogState = true
       this.referenceLists = val
       switch (val) {
@@ -179,6 +193,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '아브로소프트코리아',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            url: 'http://avrosoft.co.kr',
             img: require('@/assets/img/references/details/avrosoft-detail.jpg')
           })
           break
@@ -187,6 +202,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '두원실업',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            url: 'https://www.doowonpet.co.kr/',
             img: require('@/assets/img/references/details/doowon-detail.jpg')
           })
           break
@@ -195,6 +211,7 @@ export default defineComponent({
           this.dialogItems.push({
             title: '인베니아',
             desc: '',
+            url: 'https://www.inveniacorp.com/',
             img: require('@/assets/img/references/details/invenia-detail.jpg')
           })
           break
@@ -203,12 +220,8 @@ export default defineComponent({
           this.dialogItems.push({
             title: '오리젠코리아',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            url: 'http://orijen.co.kr/',
             img: require('@/assets/img/references/details/orijen-detail.jpg')
-          })
-          this.dialogItems.push({
-            title: '',
-            desc: '',
-            img: require('@/assets/img/references/details/orijen-detail1.jpg')
           })
           break
         case 'wuzo':
@@ -216,12 +229,8 @@ export default defineComponent({
           this.dialogItems.push({
             title: '우조엔터테인먼트',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            url: 'http://www.wuzo.co.kr/',
             img: require('@/assets/img/references/details/wuzo-detail.jpg')
-          })
-          this.dialogItems.push({
-            title: '',
-            desc: '',
-            img: require('@/assets/img/references/details/wuzo-detail1.jpg')
           })
           break
         case 'bega':
@@ -229,10 +238,14 @@ export default defineComponent({
           this.dialogItems.push({
             title: '배가',
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            url: 'http://www.begatek.com/',
             img: require('@/assets/img/references/details/bega-detail.jpg')
           })
           break
       }
+    },
+    openReference (url: string) {
+      window.open(url)
     }
   }
 })
@@ -256,5 +269,17 @@ export default defineComponent({
     opacity: 0;
     transition-duration: 1s;
   }
+}
+.dialog-title {
+  width: fit-content;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 10px 30px;
+  padding: 0 20px 0 0;
+  border-bottom: 1px solid #1b1811;
+}
+.dialog-desc {
+  font-size: 1.2em;
+  margin: 10px 30px;
 }
 </style>

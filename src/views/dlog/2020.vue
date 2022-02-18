@@ -6,7 +6,7 @@
         <el-button class="fas fa-angle-left" round @click="routerBack">
           &ensp;Prev Page
         </el-button>
-        <div class="slides">
+        <div class="slides mt-30">
           <div
             ref="container"
             class="keen-slider"

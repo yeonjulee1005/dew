@@ -37,6 +37,18 @@
             {{ items.doowon.title }}
           </div>
           </el-row>
+        <el-row class="flex-column flex-align-center">
+          <div class="reference-item cursor">
+            <img
+              :src="items.labor.img"
+              :alt="items.labor.title"
+              @click="onClickDialog(this.items.labor.alt)"
+            >
+          </div>
+          <div class="item-text">
+            {{ items.labor.title }}
+          </div>
+          </el-row>
       </el-col>
       <el-col :span="8" class="reference-column">
         <el-row class="flex-column flex-align-center">
@@ -177,6 +189,11 @@ export default defineComponent({
           title: '베가',
           img: require('@/assets/img/references/bega.png'),
           alt: 'bega'
+        },
+        labor: {
+          title: '노무인사관리플랫폼 사용자페이지',
+          img: require('@/assets/img/references/labor.jpg'),
+          alt: 'labor'
         }
       },
       referenceLists: '',
@@ -240,6 +257,15 @@ export default defineComponent({
             desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
             url: 'http://www.begatek.com/',
             img: require('@/assets/img/references/details/bega-detail.jpg')
+          })
+          break
+        case 'labor':
+          this.dialogItems = []
+          this.dialogItems.push({
+            title: '노무인사관리플랫폼',
+            desc: 'Nuxt,Node.js를 이용한 클라우드기반 노무인사관리플랫폼의 홍보페이지 및 사용자페이지 입니다.',
+            url: 'http://pay.avrosoft.co.kr/',
+            img: require('@/assets/img/references/details/labor-detail.jpg')
           })
           break
       }

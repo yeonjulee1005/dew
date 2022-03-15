@@ -288,8 +288,8 @@
     .reference {
       position: relative;
       width: 1200px;
-      height: 70vh;
-      margin: 500px auto 700px;
+      height: 100vh;
+      margin: 350px auto 200px;
       .reference-section {
         position: relative;
         width: 100%;
@@ -322,7 +322,8 @@
           .reference-item {
             height: 200px;
             margin: 20px 30px;
-            border: 1px solid rgba(#1b1811, 0.3);
+            border: 1px solid rgba(#ddd, 0.3);
+            box-shadow: 3px 3px 10px rgba($color: #eee, $alpha: .5);
             border-radius: 10px;
             overflow-y: scroll;
             -ms-overflow-style: none;
@@ -429,15 +430,25 @@
                 padding: 12px;
                 border: none;
                 border-radius: 10px;
-                border-bottom: 1px solid #393432;
                 box-sizing: border-box;
+                box-shadow: 5px 5px 15px #ddd, inset -5px -5px 15px #fff !important;
+                transition: all 0.2s ease-in-out;
+                appearance: none;
+                -webkit-appearance: none;
                 margin-top: 6px;
                 margin-bottom: 16px;
                 background-color: #fbfbfb;
                 resize: vertical;
               }
+              input[type=text]:hover, [type=email]:hover, textarea:hover {
+                box-shadow: 1px 1px 3px #ddd, inset -1px -1px 3px #fff !important;
+              }
               input[type=submit] {
                 background-color: #fbab60;
+                box-shadow: 3px 3px 5px #FBAB60, -3px -3px 5px #fff !important;
+                transition: all 0.2s ease-in-out;
+                appearance: none;
+                -webkit-appearance: none;
                 color: #fefdfa;
                 padding: 10px 16px;
                 border: none;
@@ -445,6 +456,7 @@
                 cursor: pointer;
               }
               input[type=submit]:hover {
+                box-shadow: 1px 1px 3px #ddd, -1px -1px 3px #fff !important;
                 background-color: #ffc377;
               }
               input[type=submit]:active {

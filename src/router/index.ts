@@ -4,7 +4,7 @@ import main from '../views/main.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'main',
+    name: 'Dev Records',
     component: main
   },
   {
@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/dlog',
-    name: 'dlog',
+    name: 'Picture History',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -60,6 +60,11 @@ const router = createRouter({
     // return {top:null, left:null, behavior: null}
     })
   }
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = `이연주 | ${String(to.name)}`
+  next()
 })
 
 export default router

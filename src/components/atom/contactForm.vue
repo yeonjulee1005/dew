@@ -37,7 +37,7 @@
               {{ error.message }}
             </p>
           </div>
-          <input type="submit" value="Send" />
+          <input class="submit-button" type="submit" value="Send" />
         </el-form>
     </div>
 </template>

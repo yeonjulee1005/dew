@@ -16,7 +16,7 @@
     <el-row class="contact">
       <Contact />
     </el-row>
-    <el-backtop />
+    <el-backtop :bottom="60" :right="60" />
     <Footer />
   </div>
 </template>
@@ -42,3 +42,20 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+  .el-backtop {
+    width: 50px;
+    height: 50px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px #BABECC;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .el-backtop:hover {
+    background-color: #f0f8ff;
+  }
+</style>

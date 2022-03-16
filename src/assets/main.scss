@@ -41,7 +41,13 @@
 }
 
 a.menu-text {
+  font-size: 24px;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+a.menu-text:hover {
+  color: #fefdfa;
+  text-shadow: 2px 2px 5px #999;
 }
 
 /* Margin Padding  */
@@ -149,6 +155,11 @@ footer {
       color: #fefdfa;
       padding: 0 20px;
       line-height: 15px;
+      transition: all 0.2s ease-in-out;
+    }
+    .footer-menu:hover {
+      color: #444;
+      font-weight: 700;
     }
     .copyright {
       color: #fefdfa;

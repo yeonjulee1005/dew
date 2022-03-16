@@ -209,7 +209,7 @@ export default defineComponent({
           this.dialogItems = []
           this.dialogItems.push({
             title: '아브로소프트코리아',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+            desc: `${'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.'}`,
             url: 'http://avrosoft.co.kr',
             img: require('@/assets/img/references/details/avrosoft-detail.jpg')
           })
@@ -227,7 +227,7 @@ export default defineComponent({
           this.dialogItems = []
           this.dialogItems.push({
             title: '인베니아',
-            desc: '',
+            desc: '자사 래거시 사이트 유지보수 입니다.',
             url: 'https://www.inveniacorp.com/',
             img: require('@/assets/img/references/details/invenia-detail.jpg')
           })

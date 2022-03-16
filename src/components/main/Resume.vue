@@ -62,31 +62,31 @@ export default defineComponent({
       },
       touchWell: {
         title: '터치웰',
-        desc: ' 🖋️임베디드 소프트웨어 개발'
+        desc: '🖋️ 증착장비 임베디드 소프트웨어 개발참여'
       },
       bega: {
         title: 'BEGA',
-        desc: ' 🖋️️사내 웹페이지 유지보수 및 플라즈마 장비 소프트웨어 개발'
+        desc: '🖋️️ 사내 웹페이지 유지보수 및 플라즈마 장비 소프트웨어 개발참여'
       },
       invenia: {
         title: '인베니아',
-        desc: ' 🖋️️사내 웹페이지 유지보수 및 Inspector 시스템 개발'
+        desc: '🖋️️ 사내 웹페이지 유지보수 및 Inspector 시스템 개발참여'
       },
       keyDesign: {
         title: '키디자인',
-        desc: ' 🖋️️자사몰 개발 및 유지보수'
+        desc: '🖋️️ 자사몰 개발 및 유지보수 담당'
       },
       beatRoad: {
         title: '비트로드',
-        desc: ' 🖋️️자사 사이트,자사몰 개발 및 유지보수'
+        desc: '🖋️️ 자사 사이트,자사몰 퍼블리싱 및 유지보수 담당'
       },
       dooWon: {
         title: '두원실업',
-        desc1: ' 🖋️️자사 및 본사 웹페이지 번역사이트 유지보수 및 개발'
+        desc1: '🖋️️ 자사 사이트, 본사 웹페이지 한글화 및 레거시코드 유지보수 담당'
       },
       avroSoft: {
-        title: '아브로소프트',
-        desc: ' 🖋️️FE' + '&' + 'BE 웹개발 및 Web Design'
+        title: 'Avrosoft Korea',
+        desc: '🖋️️ Vue, Nuxt 기반 FE 웹개발 및 BE, UI Web Design 작업'
       }
     }
   }

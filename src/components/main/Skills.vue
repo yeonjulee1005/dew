@@ -16,13 +16,13 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#cf3a24"
+          color="#c5e384"
           :indeterminate="true"
           :duration="6"
           class="progress"
           style="width: 400px;"
         >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
+          <span style="font-size: 20px; margin-right: 120px;">
             {{ percent.hundred }}
           </span>
         </el-progress>
@@ -35,13 +35,13 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#1c39bb"
+          color="#ebc2af"
           :indeterminate="true"
           :duration="10"
           class="progress"
           style="width: 400px;"
         >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
+          <span style="font-size: 20px; margin-right: 120px;">
             {{ percent.hundred }}
           </span>
         </el-progress>
@@ -54,13 +54,13 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="80"
-          color="#f77fbe"
+          color="#fce883"
           :indeterminate="true"
           :duration="7"
           class="progress"
           style="width: 400px;"
         >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
+          <span style="font-size: 20px; margin-right: 120px;">
             {{ percent.eighty}}
           </span>
         </el-progress>
@@ -73,7 +73,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="90"
-          color="#f8d568"
+          color="#a0e6ff"
           :indeterminate="true"
           :duration="8"
           class="progress"
@@ -92,7 +92,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="75"
-          color="#0038a8"
+          color="#56887d"
           :indeterminate="true"
           :duration="5"
           class="progress"
@@ -111,7 +111,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="80"
-          color="#00a870"
+          color="#89729e"
           :indeterminate="true"
           :duration="11"
           class="progress"
@@ -130,18 +130,36 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="90"
-          color="#3cd070"
+          color="#a2add0"
           :indeterminate="true"
           :duration="8"
           class="progress"
           style="width: 400px;"
         >
-          <span style="font-size: 20px; margin-right: 120px;">
+          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
             {{ percent.ninety }}
           </span>
         </el-progress>
       </el-row>
-
+      <el-row class="flex-align-center">
+        <span class="skills-text">
+          {{ frontEnd.flutter }}
+        </span>
+        <el-progress
+          :text-inside="true"
+          :stroke-width="23"
+          :percentage="90"
+          color="#b56c60"
+          :indeterminate="true"
+          :duration="8"
+          class="progress"
+          style="width: 400px;"
+        >
+          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
+            {{ percent.forty }}
+          </span>
+        </el-progress>
+      </el-row>
     </el-row>
     <el-row class="flex flex-column backend-list">
       <div class="flex backend-text">
@@ -155,7 +173,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="70"
-          color="#30b21a"
+          color="#bfc0ee"
           :indeterminate="true"
           :duration="7"
           class="progress"
@@ -174,7 +192,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#003b6f"
+          color="#ffa089"
           :indeterminate="true"
           :duration="8"
           class="progress"
@@ -193,13 +211,13 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="80"
-          color="#ffcc33"
+          color="#7b1113"
           :indeterminate="true"
           :duration="10"
           class="progress"
           style="width: 400px;"
         >
-          <span style="font-size: 20px; margin-right: 120px;">
+          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
             {{ percent.eighty }}
           </span>
         </el-progress>
@@ -217,7 +235,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#0fc0fc"
+          color="#ffddca"
           :indeterminate="true"
           :duration="7"
           class="progress"
@@ -236,7 +254,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="95"
-          color="#009150"
+          color="#4166f5"
           :indeterminate="true"
           :duration="10"
           class="progress"
@@ -255,7 +273,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#4c2882"
+          color="#fc6c85"
           :indeterminate="true"
           :duration="5"
           class="progress"
@@ -274,7 +292,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#0f52ba"
+          color="#ffb300"
           :indeterminate="true"
           :duration="11"
           class="progress"
@@ -293,7 +311,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#0f52ba"
+          color="#8878c3"
           :indeterminate="true"
           :duration="6"
           class="progress"
@@ -312,7 +330,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#0f52ba"
+          color="#a0d6b4"
           :indeterminate="true"
           :duration="11"
           class="progress"
@@ -331,13 +349,13 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="100"
-          color="#ff7800"
+          color="#0073cf"
           :indeterminate="true"
           :duration="5"
           class="progress"
           style="width: 400px;"
         >
-          <span style="font-size: 20px; margin-right: 120px;">
+          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
             {{ percent.hundred }}
           </span>
         </el-progress>
@@ -350,7 +368,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="80"
-          color="#59260b"
+          color="#808080"
           :indeterminate="true"
           :duration="5"
           class="progress"
@@ -369,7 +387,7 @@
           :text-inside="true"
           :stroke-width="23"
           :percentage="90"
-          color="#9b111e"
+          color="#deaa88"
           :indeterminate="true"
           :duration="7"
           class="progress"
@@ -401,7 +419,8 @@ export default defineComponent({
         javascript: 'JavaScript',
         typescript: 'TypeScript',
         vue: 'Vue 2 & 3',
-        nuxt: 'Nuxt'
+        nuxt: 'Nuxt',
+        flutter: 'Flutter'
       },
       backEnd: {
         title: 'BE Skills',
@@ -422,6 +441,7 @@ export default defineComponent({
         xd: 'XD'
       },
       percent: {
+        forty: '⚙️ 40%',
         fifty: '⚙️ 50%',
         fiftyHalf: '⚙️ 55%',
         sixty: '⚙️ 60%',

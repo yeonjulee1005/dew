@@ -62,6 +62,7 @@ a.menu-text:hover {
 .flex-row { flex-direction: row; }
 .flex-justify-center { justify-content: center; }
 .flex-justify-end { justify-content: flex-end; }
+.flex-justify-evenly { justify-content: space-evenly; }
 .flex-align-center { align-items: center; }
 .flex-align-end { align-items: flex-end; }
 
@@ -205,4 +206,17 @@ footer {
 }
 .el-progress-bar__inner.el-progress-bar__inner--indeterminate {
   border-radius: 100px !important;
+}
+
+button.el-button.el-button--default.is-round.fas.fa-angle-left {
+  border: none;
+  box-shadow: 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+button.el-button.el-button--default.is-round.fas.fa-angle-left:hover,
+button.el-button.el-button--default.is-round.fas.fa-angle-left:focus {
+  box-shadow: 1px 1px 5px #ddd, inset -1px -1px 5px #fff;
+  background-color: #fefefe !important;
 }

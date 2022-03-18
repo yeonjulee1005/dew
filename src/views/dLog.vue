@@ -60,20 +60,20 @@ export default defineComponent({
           desc: 'HISTORY OF',
           year: '2019',
           img: require('@/assets/img/2019/201908.jpg'),
-          src: '/dlog/2019'
+          src: '/dLog/2019'
         },
         log2020: {
           desc: 'HISTORY OF',
           year: '2020',
           img: require('@/assets/img/2020/202051.jpg'),
-          src: '/dlog/2020'
+          src: '/dLog/2020'
 
         },
         log2021: {
           desc: 'HISTORY OF',
           year: '2021',
           img: require('@/assets/img/2021/202107.jpg'),
-          src: '/dlog/2021'
+          src: '/dLog/2021'
         }
       }
     }

@@ -13,9 +13,9 @@
               {{ projects.title }}
             </div>
           </el-link>
-          <el-link :underline="false" type="warning" :href="this.dlog.url">
+          <el-link :underline="false" type="warning" :href="this.dLog.url">
             <div class="footer-menu">
-              {{ dlog.title }}
+              {{ dLog.title }}
             </div>
           </el-link>
         </div>
@@ -46,9 +46,9 @@ export default defineComponent({
         title: 'Projects',
         url: '/projects'
       },
-      dlog: {
+      dLog: {
         title: 'D.Log',
-        url: '/dlog'
+        url: '/dLog'
       },
       copyright: 'Copyright © Yeonju Lee All Rights Reserved.',
       designed: 'Designed by Yeonju Lee.'

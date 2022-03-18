@@ -72,7 +72,7 @@ export default defineComponent({
         log2021: {
           desc: 'HISTORY OF',
           year: '2021',
-          img: require('@/assets/img/2021/202108.jpg'),
+          img: require('@/assets/img/2021/202107.jpg'),
           src: '/dlog/2021'
         }
       }

@@ -183,7 +183,7 @@ footer {
   }
   .el-sub-menu__title {
     justify-content: flex-end;
-    padding: unset;
+    padding: 0 10px 0 0;
   }
   .el-sub-menu {
     padding-left: unset;
@@ -191,9 +191,10 @@ footer {
       width: 30px;
     }
     .el-menu-item {
+      top: 11px;
       justify-content: flex-end;
-      padding: unset;
-      min-width: none;
+      padding: 0 10px 0 0;
+      min-width: unset !important;
     }
     .el-menu-item:hover {
       background-color: transparent;
@@ -210,13 +211,13 @@ footer {
 
 button.el-button.el-button--default.is-round.fas.fa-angle-left {
   border: none;
-  box-shadow: 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
+  box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
   transition: all 0.2s ease-in-out;
   appearance: none;
   -webkit-appearance: none;
 }
 button.el-button.el-button--default.is-round.fas.fa-angle-left:hover,
 button.el-button.el-button--default.is-round.fas.fa-angle-left:focus {
-  box-shadow: 1px 1px 5px #ddd, inset -1px -1px 5px #fff;
+  box-shadow: 1px 1px 5px #ddd, -1px -1px 5px #fff;
   background-color: #fefefe !important;
 }

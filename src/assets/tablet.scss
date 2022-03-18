@@ -89,14 +89,13 @@
   
       .resume-contents {
         justify-content: center;
-        width: 30%;
+        width: 34%;
         .intro-img {
           position: relative;
           img {
-            width: 180px;
-            height: 180px;
-            border-radius: 180px;
-            box-shadow: 1px;
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
             box-shadow: 3px 3px 10px rgba($color: #a8a9ad, $alpha: .6);
           }
         }
@@ -104,7 +103,7 @@
   
       .resume-detail {
         justify-content: space-evenly;
-        width: 70%;
+        width: 65%;
         .career {
           width: 30%;
           font-weight: 800;
@@ -122,9 +121,9 @@
         top: -50px;
         width: 100%;
         height: 450px;
-        background-color: #bcd4e6;
-        border-radius: 100px;
-        box-shadow: 5px 5px 15px rgba($color: #4682b4, $alpha: .6);
+        background-color: #ffe6c5;
+        border-radius: 50px;
+        box-shadow: 5px 5px 15px rgba($color: #ddd, $alpha: .6);
         z-index: -10;
       }
     }
@@ -338,7 +337,7 @@
           .reference-item {
             height: 200px;
             margin: 20px 30px;
-            box-shadow: 5px 5px 15px #bbb, inset -5px -5px 15px #fff;
+            box-shadow: 5px 5px 15px #bbb, -5px -5px 15px #fff;
             transition: all 0.2s ease-in-out;
             appearance: none;
             -webkit-appearance: none;
@@ -352,7 +351,7 @@
             }
           }
           .reference-item:hover {
-            box-shadow: 1px 1px 5px #bbb, inset -1px -1px 5px #fff;
+            box-shadow: 1px 1px 5px #bbb, -1px -1px 5px #fff;
           }
           & img {
             width: 350px;
@@ -415,7 +414,7 @@
                 border-radius: 15px;
                 width: 80px;
                 height: 80px;
-                box-shadow: 5px 5px 15px #ccc, inset -5px -5px 15px #fff;
+                box-shadow: 5px 5px 15px #ccc, -5px -5px 15px #fff;
                 transition: all 0.2s ease-in-out;
                 appearance: none;
                 -webkit-appearance: none;
@@ -424,7 +423,7 @@
                 border-radius: 15px;
                 width: 80px;
                 height: 80px;
-                box-shadow: 1px 1px 5px #ddd, inset -1px -1px 5px #fff;
+                box-shadow: 1px 1px 5px #ddd, -1px -1px 5px #fff;
               }
             }
             .kakaotalk-desc {
@@ -464,7 +463,7 @@
               border: none;
               border-radius: 10px;
               box-sizing: border-box;
-              box-shadow: 5px 5px 15px #ddd, inset -5px -5px 15px #fff !important;
+              box-shadow: 5px 5px 15px #ddd, -5px -5px 15px #fff !important;
               transition: all 0.2s ease-in-out;
               appearance: none;
               -webkit-appearance: none;
@@ -474,7 +473,7 @@
               resize: vertical;
             }
             input[type=text]:hover, [type=email]:hover, textarea:hover {
-              box-shadow: 1px 1px 3px #ddd, inset -1px -1px 3px #fff !important;
+              box-shadow: 1px 1px 3px #ddd, -1px -1px 3px #fff !important;
             }
             input[type=submit] {
               background-color: #fbab60;
@@ -608,4 +607,47 @@
         }
       }
     }
+    .projects {
+      position: relative;
+      width: 100vw;
+      height: 79vh;
+      .project-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 95vw;
+        height: 350px;
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+        transform: translateX(-50%) translateY(-50%);
+        .project-content {
+          position: relative;
+          width: 25%;
+          height: 50%;
+          border-radius: 30px;
+          background-color: #f8ba81;
+          box-shadow: 5px 5px 15px #ccc, -5px -5px 15px #fff;
+          transition: all 0.2s ease-in-out;
+          appearance: none;
+          -webkit-appearance: none;
+          .el-link {
+            width: 100%;
+            height: 100%;
+          }
+          span {
+            color: #1b1811;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            word-break: keep-all;
+          }
+        }
+        .project-content:hover,
+        .project-content:active {
+          box-shadow: 1px 1px 5px #ddd, -1px -1px 5px #fff;
+        }
+      }
+    }
+
   }

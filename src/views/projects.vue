@@ -3,20 +3,19 @@
     <Menus />
     <div class="projects">
       <div class="project-section flex flex-row flex-justify-evenly">
-        <div class="project-content flex flex-justify-center flex-align-center">
-          <span>
-            Custom Calculator
-          </span>
-        </div>
-        <div class="project-content flex flex-justify-center flex-align-center">
-          <span>
-            프로젝트 작업중
-          </span>
-        </div>
-        <div class="project-content flex flex-justify-center flex-align-center">
-          <span>
-            프로젝트 작업중
-          </span>
+        <div
+          class="project-content flex flex-justify-center flex-align-center"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <el-link
+            :underline="false"
+            :href="item.src"
+          >
+            <span>
+              {{ item.title }}
+            </span>
+          </el-link>
         </div>
       </div>
     </div>
@@ -33,6 +32,24 @@ export default defineComponent({
   title: 'Project',
   components: {
     Menus, Footer
+  },
+  data () {
+    return {
+      items: {
+        calculate: {
+          // src: '/projects/calculator',
+          title: 'Custom Calculate'
+        },
+        test: {
+          // src: '/projects/calculator',
+          title: 'Custom Calculate'
+        },
+        test2: {
+          // src: '/projects/calculator',
+          title: 'Custom Calculate'
+        }
+      }
+    }
   }
 })
 </script>

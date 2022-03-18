@@ -1,7 +1,7 @@
 <template>
   <div>
     <Menus />
-    <div class="calculate">
+    <div class="calculator">
       calculate
     </div>
     <Footer />
@@ -14,7 +14,7 @@ import Menus from '@/components/menus.vue'
 import Footer from '@/components/footer.vue'
 
 export default defineComponent({
-  title: 'calculate',
+  title: 'calculator',
   components: {
     Menus, Footer
   },

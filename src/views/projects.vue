@@ -38,15 +38,15 @@ export default defineComponent({
       items: {
         calculate: {
           src: '/projects/calculator',
-          title: ''
+          title: 'Custom Calculate'
         },
         test: {
           // src: '/projects/calculator',
-          title: ''
+          title: '준비중⌛'
         },
         test2: {
           // src: '/projects/calculator',
-          title: ''
+          title: '준비중⏳'
         }
       }
     }

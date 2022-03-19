@@ -37,16 +37,16 @@ export default defineComponent({
     return {
       items: {
         calculate: {
-          // src: '/projects/calculator',
+          src: '/projects/calculator',
           title: 'Custom Calculate'
         },
         test: {
           // src: '/projects/calculator',
-          title: 'Custom Calculate'
+          title: '준비중⌛'
         },
         test2: {
           // src: '/projects/calculator',
-          title: 'Custom Calculate'
+          title: '준비중⏳'
         }
       }
     }

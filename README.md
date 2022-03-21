@@ -1,4 +1,6 @@
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+#개발자 이연주 포트폴리오 Web페이지 입니다. 
+
+[![My Skills](https://skillicons.dev/icons?i=vue,js,ts,html,css,firebase,wasm,vscode,vim,git,ai,)](https://skillicons.dev)
 
 
 # dew

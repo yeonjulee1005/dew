@@ -1,4 +1,6 @@
-#개발자 이연주 포트폴리오 Web페이지 입니다. 
+# 개발자 이연주 포트폴리오 Web페이지 입니다. 
+
+## 사용한 스킬은 아래와 같습니다.
 
 [![My Skills](https://skillicons.dev/icons?i=vue,js,ts,html,css,firebase,wasm,vscode,vim,git,ai,)](https://skillicons.dev)
 

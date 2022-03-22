@@ -61,7 +61,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.eighty}}
+            {{ percent.ninety}}
           </span>
         </el-progress>
       </el-row>
@@ -80,7 +80,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.ninety }}
+            {{ percent.eighty }}
           </span>
         </el-progress>
       </el-row>
@@ -118,7 +118,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.eighty }}
+            {{ percent.seventy }}
           </span>
         </el-progress>
       </el-row>
@@ -137,7 +137,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.ninety }}
+            {{ percent.seventy }}
           </span>
         </el-progress>
       </el-row>
@@ -199,7 +199,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.hundred }}
+            {{ percent.seventy }}
           </span>
         </el-progress>
       </el-row>
@@ -218,7 +218,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.eighty }}
+            {{ percent.forty }}
           </span>
         </el-progress>
       </el-row>
@@ -356,7 +356,7 @@
           style="width: 400px;"
         >
           <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.hundred }}
+            {{ percent.eighty }}
           </span>
         </el-progress>
       </el-row>

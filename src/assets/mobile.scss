@@ -88,75 +88,70 @@
     .resume {
       position: relative;
       width: 100vw;
-      height: 105vh;
+      height: 130vh;
       flex-direction: column;
       flex-wrap: nowrap !important;
       align-items: center;
       margin: 200px auto 100px;
-  
-      .resume-contents {
-        justify-content: center;
-        align-items: center;
+      .resume-container {
         width: 90vw;
-        .intro-img {
-          position: relative;
-          img {
-            width: 250px;
-            height: 250px;
-            border-radius: 250px;
-            box-shadow: 3px 3px 10px rgba($color: #a8a9ad, $alpha: .6);
+        flex-direction: column;
+        background-color: #ffe6c5;
+        padding: 30px 0 40px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 15px rgba($color: #ddd, $alpha: .6);
+        .resume-contents {
+          justify-content: center;
+          align-items: center;
+          width: 90vw;
+          .intro-img {
+            position: relative;
+            img {
+              width: 250px;
+              height: 250px;
+              border-radius: 250px;
+              box-shadow: 3px 3px 10px rgba($color: #a8a9ad, $alpha: .6);
+            }
           }
         }
-      }
-  
-      .resume-detail {
-        position: relative;
-        justify-content: space-evenly;
-        width: 90vw;
-        .resume-inner {
-  
-          .career {
-            position: relative;
-            width: 90vw;
-            font-weight: 800;
-            font-size: 1.9em;
-            margin: 20px auto;
-            padding-left: 30px;
-          }
-          .career-detail {
-            position: relative;
-            font-weight: 500;
-            width: 80vw;
-            font-size: 1em;
-            height: 70vh;
-            line-height: 20px;
-            margin: 20px auto 0;
-            .el-row {
-              flex-wrap: nowrap;
-              flex-direction: column;
-              max-width: unset;
+        .resume-detail {
+          position: relative;
+          justify-content: space-evenly;
+          width: 90vw;
+          .resume-inner {
+            .career {
+              position: relative;
+              width: 90vw;
+              font-weight: 800;
+              font-size: 1.9em;
+              margin: 20px auto;
+              padding-left: 30px;
+            }
+            .career-detail {
+              position: relative;
+              font-weight: 500;
               width: 80vw;
-              line-height: 17px;
-              margin-bottom: 5px;
-              .el-col {
-                margin-top: 4px;
+              font-size: 1em;
+              height: 100%;
+              line-height: 20px;
+              margin: 20px auto 0;
+              .el-row {
+                flex-wrap: nowrap;
+                flex-direction: column;
                 max-width: unset;
-                text-align: left;
-                word-break: keep-all;
+                width: 80vw;
+                line-height: 17px;
+                margin-bottom: 5px;
+                .el-col {
+                  margin-top: 4px;
+                  max-width: unset;
+                  text-align: left;
+                  word-break: keep-all;
+                }
               }
             }
           }
         }
-      }
-      .resume-background {
-        position: absolute;
-        top: -60px;
-        width: 90vw;
-        height: 900px;
-        background-color: #ffe6c5;
-        border-radius: 25px;
-        box-shadow: 5px 5px 15px rgba($color: #ddd, $alpha: .6);
-        z-index: -10;
       }
     }
     .skills {

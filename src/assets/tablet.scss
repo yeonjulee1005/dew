@@ -86,45 +86,40 @@
       width: 95vw;
       height: 40vh;
       margin: 200px auto 200px;
-  
-      .resume-contents {
-        justify-content: center;
-        width: 34%;
-        .intro-img {
-          position: relative;
-          img {
-            width: 250px;
-            height: 250px;
-            border-radius: 250px;
-            box-shadow: 3px 3px 10px rgba($color: #a8a9ad, $alpha: .6);
-          }
-        }
-      }
-  
-      .resume-detail {
-        justify-content: space-evenly;
-        width: 65%;
-        .career {
-          width: 30%;
-          font-weight: 800;
-          font-size: 28px;
-        }
-        .career-detail {
-          font-weight: 500;
-          font-size: 14px;
-          height: 320px;
-          line-height: 16px;
-        }
-      }
-      .resume-background {
-        position: absolute;
-        top: -50px;
+      .resume-container {
         width: 100%;
         height: 450px;
         background-color: #ffe6c5;
         border-radius: 50px;
         box-shadow: 5px 5px 15px rgba($color: #ddd, $alpha: .6);
-        z-index: -10;
+        .resume-contents {
+          justify-content: center;
+          width: 34%;
+          .intro-img {
+            position: relative;
+            img {
+              width: 250px;
+              height: 250px;
+              border-radius: 250px;
+              box-shadow: 3px 3px 10px rgba($color: #a8a9ad, $alpha: .6);
+            }
+          }
+        }
+        .resume-detail {
+          justify-content: space-evenly;
+          width: 65%;
+          .career {
+            width: 30%;
+            font-weight: 800;
+            font-size: 28px;
+          }
+          .career-detail {
+            font-weight: 500;
+            font-size: 14px;
+            height: 320px;
+            line-height: 16px;
+          }
+        }
       }
     }
     .skills {

@@ -1,52 +1,53 @@
 <template>
-  <div class="flex resume-contents">
-    <div class="flex flex-align-center intro-img">
-      <img :src="resumeImg">
-    </div>
-  </div>
-  <div class="flex flex-column resume-detail">
-    <div class="flex flex-column resume-inner">
-      <div class="flex career">
-        {{ career.title }}
+  <div class="resume-container flex">
+    <div class="flex resume-contents">
+      <div class="flex flex-align-center intro-img">
+        <img :src="resumeImg">
       </div>
-      <el-row class="flex resume-list flex-column career-detail mt-20">
-        <el-row>
-          <span class="bold mb-20">{{ career.desc }}</span>
+    </div>
+    <div class="flex flex-column resume-detail">
+      <div class="flex flex-column resume-inner">
+        <div class="flex career">
+          {{ career.title }}
+        </div>
+        <el-row class="flex resume-list flex-column career-detail mt-20">
+          <el-row>
+            <span class="bold mb-20">{{ career.desc }}</span>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ touchWell.title }}</el-col>
+            <el-col :span="18">{{ touchWell.desc }}</el-col>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ bega.title }}</el-col>
+            <el-col :span="18">{{ bega.desc }}</el-col>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ invenia.title }}</el-col>
+            <el-col :span="18">{{ invenia.desc }}</el-col>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ keyDesign.title }}</el-col>
+            <el-col :span="18">{{ keyDesign.desc }}</el-col>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ beatRoad.title }}</el-col>
+            <el-col :span="18">{{ beatRoad.desc }}</el-col>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ dooWon.title }}</el-col>
+            <el-col :span="18">
+              <el-row>{{ dooWon.desc1 }}</el-row>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-col align="right" :span="6" class="bold pr-30">{{ avroSoft.title }}</el-col>
+            <el-col :span="18">{{ avroSoft.desc }}</el-col>
+          </el-row>
         </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ touchWell.title }}</el-col>
-          <el-col :span="18">{{ touchWell.desc }}</el-col>
-        </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ bega.title }}</el-col>
-          <el-col :span="18">{{ bega.desc }}</el-col>
-        </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ invenia.title }}</el-col>
-          <el-col :span="18">{{ invenia.desc }}</el-col>
-        </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ keyDesign.title }}</el-col>
-          <el-col :span="18">{{ keyDesign.desc }}</el-col>
-        </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ beatRoad.title }}</el-col>
-          <el-col :span="18">{{ beatRoad.desc }}</el-col>
-        </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ dooWon.title }}</el-col>
-          <el-col :span="18">
-            <el-row>{{ dooWon.desc1 }}</el-row>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col align="right" :span="6" class="bold pr-30">{{ avroSoft.title }}</el-col>
-          <el-col :span="18">{{ avroSoft.desc }}</el-col>
-        </el-row>
-      </el-row>
+      </div>
     </div>
   </div>
-  <div class="resume-background" />
 </template>
 
 <script lang="ts">

@@ -19,8 +19,7 @@
     >
     {{ item.msg }}
   </span>
-  <div class="skills-title-box">
-  </div>
+  <div class="skills-title-box" />
 </template>
 
 <script lang="ts">

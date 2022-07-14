@@ -47,7 +47,7 @@ import GLightbox from 'glightbox'
 const animation = { duration: 10000, easing: (t) => t }
 
 export default defineComponent({
-  title: '2019',
+  title: '2022',
   components: {
     Menus, Footer
   },
@@ -55,21 +55,40 @@ export default defineComponent({
     return {
       prev: '< Prev Page',
       items: [
-        { img: require('@/assets/img/2019/201901.jpg') },
-        { img: require('@/assets/img/2019/201902.jpg') },
-        { img: require('@/assets/img/2019/201903.jpg') },
-        { img: require('@/assets/img/2019/201904.jpg') },
-        { img: require('@/assets/img/2019/201905.jpg') },
-        { img: require('@/assets/img/2019/201906.jpg') },
-        { img: require('@/assets/img/2019/201907.jpg') },
-        { img: require('@/assets/img/2019/201908.jpg') },
-        { img: require('@/assets/img/2019/201909.jpg') },
-        { img: require('@/assets/img/2019/201910.jpg') },
-        { img: require('@/assets/img/2019/201911.jpg') }
+        { img: require('@/assets/img/2022/202201.jpg') },
+        { img: require('@/assets/img/2022/202202.jpg') },
+        { img: require('@/assets/img/2022/202203.jpg') },
+        { img: require('@/assets/img/2022/202204.jpg') },
+        { img: require('@/assets/img/2022/202205.jpg') },
+        { img: require('@/assets/img/2022/202206.jpg') },
+        { img: require('@/assets/img/2022/202207.jpg') },
+        { img: require('@/assets/img/2022/202208.jpg') },
+        { img: require('@/assets/img/2022/202209.jpg') },
+        { img: require('@/assets/img/2022/202210.jpg') },
+        { img: require('@/assets/img/2022/202211.jpg') },
+        { img: require('@/assets/img/2022/202212.jpg') },
+        { img: require('@/assets/img/2022/202213.jpg') },
+        { img: require('@/assets/img/2022/202214.jpg') },
+        { img: require('@/assets/img/2022/202215.jpg') },
+        { img: require('@/assets/img/2022/202216.jpg') },
+        { img: require('@/assets/img/2022/202217.jpg') },
+        { img: require('@/assets/img/2022/202218.jpg') },
+        { img: require('@/assets/img/2022/202219.jpg') },
+        { img: require('@/assets/img/2022/202220.jpg') },
+        { img: require('@/assets/img/2022/202221.jpg') },
+        { img: require('@/assets/img/2022/202222.jpg') },
+        { img: require('@/assets/img/2022/202223.jpg') },
+        { img: require('@/assets/img/2022/202224.jpg') },
+        { img: require('@/assets/img/2022/202225.jpg') },
+        { img: require('@/assets/img/2022/202226.jpg') },
+        { img: require('@/assets/img/2022/202227.jpg') },
+        { img: require('@/assets/img/2022/202228.jpg') },
+        { img: require('@/assets/img/2022/202229.jpg') }
       ]
     }
   },
   mounted () {
+    // lightbox settings
     this.lightbox = GLightbox({
       selector: '.glightbox'
     })
@@ -81,6 +100,9 @@ export default defineComponent({
         perView: 3,
         spacing: 30
       },
+      mode: 'free',
+      renderMode: 'performance',
+      drag: true,
       breakpoints: {
         '(max-width: 1199px)': {
           slides: {
@@ -97,9 +119,6 @@ export default defineComponent({
           loop: true
         }
       },
-      mode: 'free',
-      renderMode: 'performance',
-      drag: true,
       created (s) {
         s.moveToIdx(1, true, animation)
       },
@@ -118,6 +137,7 @@ export default defineComponent({
     routerBack () {
       this.$router.push('/dlog')
     }
+
   }
 })
 </script>

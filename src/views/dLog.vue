@@ -1,7 +1,7 @@
 <template>
   <div>
     <Menus />
-    <div class="dlog">
+    <div class="dLog">
       <div class="slider-section">
         <div
           ref="container"

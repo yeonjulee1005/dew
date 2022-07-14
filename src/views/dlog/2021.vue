@@ -149,7 +149,7 @@ export default defineComponent({
   },
   methods: {
     routerBack () {
-      this.$router.push('/dlog')
+      this.$router.push('/dLog')
     }
 
   }

@@ -2,7 +2,7 @@
   <el-footer height="200px">
     <div class="flex flex-justify-center flex-align-center flex-column footer-section">
       <div class="flex flex-column">
-        <div class="flex flex-row mb-30">
+        <div class="footer-menu-container flex flex-row mb-30">
           <el-link :underline="false" type="warning" :href="this.home.url">
             <div class="footer-menu">
               {{ home.title }}

@@ -48,8 +48,7 @@ a.menu-text {
   transition: all 0.2s ease-in-out;
 }
 a.menu-text:hover {
-  color: #fefdfa;
-  text-shadow: 2px 2px 5px #999;
+  color: #777b7e;
 }
 
 /* Margin Padding  */
@@ -149,20 +148,22 @@ a.menu-text:hover {
 
 footer {
   position: relative;
-  background-color: #ffa565;
+  background-color: #576F72;
   .footer-section {
     height: 200px;
     font-weight: 400;
     font-size: 16px;
-    .footer-menu {
-      color: #fefdfa;
-      padding: 0 20px;
-      line-height: 15px;
-      transition: all 0.2s ease-in-out;
-    }
-    .footer-menu:hover {
-      color: #444;
-      font-weight: 700;
+    .footer-menu-container {
+      width: 300px;
+      .footer-menu {
+        color: #fefdfa;
+        padding: 0 20px;
+        line-height: 15px;
+        transition: all 0.2s ease-in-out;
+      }
+      .footer-menu:hover {
+        color: #444;
+      }
     }
     .copyright {
       color: #fefdfa;

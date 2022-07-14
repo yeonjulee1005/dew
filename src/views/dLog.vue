@@ -19,7 +19,7 @@
             >
               <div class="slide-desc">
                 <span>
-                  {{ item.desc }}
+                  {{ title }}
                 </span>
                 <span>
                   {{ item.year }}
@@ -27,7 +27,6 @@
               </div>
               <img
                 :src="item.img"
-                :alt="item.year"
               />
             </el-link>
           </div>
@@ -49,33 +48,35 @@ import { spaceProps } from 'element-plus'
 const animation = { duration: 50000, easing: (t) => t * 4 }
 
 export default defineComponent({
-  title: 'dlog',
+  title: 'dLog',
   components: {
     Menus, Footer
   },
   data () {
     return {
-      items: {
-        log2019: {
-          desc: 'HISTORY OF',
-          year: '2019',
-          img: require('@/assets/img/2019/201908.jpg'),
-          src: '/dLog/2019'
+      title: 'HISTORY OF',
+      items: [
+        {
+          year: '2022',
+          img: require('@/assets/img/2022/202202.jpg'),
+          src: '/dLog/2022'
         },
-        log2020: {
-          desc: 'HISTORY OF',
-          year: '2020',
-          img: require('@/assets/img/2020/202051.jpg'),
-          src: '/dLog/2020'
-
-        },
-        log2021: {
-          desc: 'HISTORY OF',
+        {
           year: '2021',
           img: require('@/assets/img/2021/202107.jpg'),
           src: '/dLog/2021'
+        },
+        {
+          year: '2020',
+          img: require('@/assets/img/2020/202051.jpg'),
+          src: '/dLog/2020'
+        },
+        {
+          year: '2019',
+          img: require('@/assets/img/2019/201908.jpg'),
+          src: '/dLog/2019'
         }
-      }
+      ]
     }
   },
   setup () {

@@ -6,398 +6,36 @@
   <el-col :span="10" class="flex flex-column skill-list">
     <el-row class="flex flex-column frontend-list">
       <div class="flex frontend-text">
-        {{ frontEnd.title }}
+        {{ frontEndTitle }}
       </div>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.html }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#c5e384"
-          :indeterminate="true"
-          :duration="6"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.css }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#ebc2af"
-          :indeterminate="true"
-          :duration="10"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.sass }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="80"
-          color="#fce883"
-          :indeterminate="true"
-          :duration="7"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.ninety}}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.javascript }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="90"
-          color="#a0e6ff"
-          :indeterminate="true"
-          :duration="8"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.eighty }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.typescript }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="75"
-          color="#56887d"
-          :indeterminate="true"
-          :duration="5"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.seventyHalf }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.vue }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="80"
-          color="#89729e"
-          :indeterminate="true"
-          :duration="11"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.seventy }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.nuxt }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="90"
-          color="#a2add0"
-          :indeterminate="true"
-          :duration="8"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.seventy }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ frontEnd.flutter }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="90"
-          color="#b56c60"
-          :indeterminate="true"
-          :duration="8"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.forty }}
-          </span>
-        </el-progress>
-      </el-row>
+      <div
+        v-for="item in frontEndData"
+        :key="item.index"
+      >
+        <SkillProgress :progress-bar-data="item" />
+      </div>
     </el-row>
     <el-row class="flex flex-column backend-list">
       <div class="flex backend-text">
-        {{ backEnd.title }}
+        {{ backEndTitle }}
       </div>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ backEnd.node }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="70"
-          color="#bfc0ee"
-          :indeterminate="true"
-          :duration="7"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.seventy }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ backEnd.postgre }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#ffa089"
-          :indeterminate="true"
-          :duration="8"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.seventy }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ backEnd.python }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="80"
-          color="#7b1113"
-          :indeterminate="true"
-          :duration="10"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.forty }}
-          </span>
-        </el-progress>
-      </el-row>
+      <div
+        v-for="item in backEndData"
+        :key="item.index"
+      >
+        <SkillProgress :progress-bar-data="item" />
+      </div>
     </el-row>
     <el-row class="flex flex-column tools-list">
       <div class="flex tools-text">
-        {{ tools.title }}
+        {{ toolsTitle }}
       </div>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.vscode }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#ffddca"
-          :indeterminate="true"
-          :duration="7"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.vim }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="95"
-          color="#4166f5"
-          :indeterminate="true"
-          :duration="10"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.ninetyHalf }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.github }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#fc6c85"
-          :indeterminate="true"
-          :duration="5"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.jira }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#ffb300"
-          :indeterminate="true"
-          :duration="11"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.bitbucket }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#8878c3"
-          :indeterminate="true"
-          :duration="6"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.sourcetree }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#a0d6b4"
-          :indeterminate="true"
-          :duration="11"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.hundred }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.postman }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="100"
-          color="#0073cf"
-          :indeterminate="true"
-          :duration="5"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.eighty }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.illustration }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="80"
-          color="#808080"
-          :indeterminate="true"
-          :duration="5"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.eighty }}
-          </span>
-        </el-progress>
-      </el-row>
-      <el-row class="flex-align-center">
-        <span class="skills-text">
-          {{ tools.xd }}
-        </span>
-        <el-progress
-          :text-inside="true"
-          :stroke-width="23"
-          :percentage="90"
-          color="#deaa88"
-          :indeterminate="true"
-          :duration="7"
-          class="progress"
-          style="width: 400px;"
-        >
-          <span style="font-size: 20px; margin-right: 120px; color: #f5f3ef;">
-            {{ percent.ninety }}
-          </span>
-        </el-progress>
-      </el-row>
+      <div
+        v-for="item in toolsData"
+        :key="item.index"
+      >
+        <SkillProgress :progress-bar-data="item" />
+      </div>
     </el-row>
   </el-col>
 </template>
@@ -406,54 +44,46 @@
 import { defineComponent } from 'vue'
 import SkillImage from '@/components/atom/skill-image.vue'
 import SkillDescription from '@/components/atom/skill-description.vue'
+import SkillProgress from '@/components/atom/skill-progress.vue'
 
 export default defineComponent({
-  components: { SkillImage, SkillDescription },
+  components: {
+    SkillImage,
+    SkillDescription,
+    SkillProgress
+  },
   data () {
     return {
-      frontEnd: {
-        title: 'FE Skills',
-        html: 'HTML5',
-        css: 'CSS3',
-        sass: 'SASS & SCSS',
-        javascript: 'JavaScript',
-        typescript: 'TypeScript',
-        vue: 'Vue 2 & 3',
-        nuxt: 'Nuxt',
-        flutter: 'Flutter'
-      },
-      backEnd: {
-        title: 'BE Skills',
-        node: 'Node.js',
-        postgre: 'PostgreSQL',
-        python: 'Python'
-      },
-      tools: {
-        title: 'Tools',
-        vscode: 'VS Code',
-        vim: 'vim',
-        github: 'GitHub',
-        jira: 'Jira',
-        bitbucket: 'Bitbucket',
-        sourcetree: 'Sourcetree',
-        postman: 'Postman',
-        illustration: 'Illustration',
-        xd: 'XD'
-      },
-      percent: {
-        forty: '⚙️ 40%',
-        fifty: '⚙️ 50%',
-        fiftyHalf: '⚙️ 55%',
-        sixty: '⚙️ 60%',
-        sixtyHalf: '⚙️ 65%',
-        seventy: '⚙️ 70%',
-        seventyHalf: '⚙️ 75%',
-        eighty: '⚙️ 80%',
-        eightyHalf: '⚙️ 85%',
-        ninety: '⚙️ 90%',
-        ninetyHalf: '⚙️ 95%',
-        hundred: '⚙️ 100%'
-      }
+      frontEndTitle: 'FE Skills',
+      backEndTitle: 'BE Skills',
+      toolsTitle: 'Tools',
+      frontEndData: [
+        { title: 'HTML5', duration: 6, percent: 100, percentText: '⚙️ 100%', color: '#c5e384', style: 'font-size: 20px; margin-right: 120px;' },
+        { title: 'CSS3', duration: 10, percent: 100, percentText: '⚙️ 100%', color: '#ebc2af', style: 'font-size: 20px; margin-right: 120px;' },
+        { title: 'SASS/SCSS', duration: 7, percent: 90, percentText: '⚙️ 90%', color: '#fce883', style: 'font-size: 20px; margin-right: 120px;' },
+        { title: 'JavaScript', duration: 8, percent: 80, percentText: '⚙️ 80%', color: '#a0e6ff', style: 'font-size: 20px; margin-right: 120px;' },
+        { title: 'TypeScript', duration: 5, percent: 65, percentText: '⚙️ 65%', color: '#56887d', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Vue.js', duration: 11, percent: 85, percentText: '⚙️ 85%', color: '#89729e', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Nuxt.js', duration: 8, percent: 90, percentText: '⚙️ 90%', color: '#a2add0', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Flutter', duration: 6, percent: 40, percentText: '⚙️ 40%', color: '#b56c60', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' }
+      ],
+      backEndData: [
+        { title: 'Node.js', duration: 7, percent: 60, percentText: '⚙️ 60%', color: '#bfc0ee', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'PostgreSQL', duration: 8, percent: 70, percentText: '⚙️ 70%', color: '#ffa089', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Python', duration: 10, percent: 60, percentText: '⚙️ 60%', color: '#7b1113', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' }
+      ],
+      toolsData: [
+        { title: 'VS Code', duration: 7, percent: 100, percentText: '⚙️ 100%', color: '#ffddca', style: 'font-size: 20px; margin-right: 120px;' },
+        { title: 'Vim', duration: 10, percent: 95, percentText: '⚙️ 95%', color: '#4166f5', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'GitHub', duration: 5, percent: 100, percentText: '⚙️ 100%', color: '#fc6c85', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Jira', duration: 11, percent: 100, percentText: '⚙️ 100%', color: '#ffb300', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Azure', duration: 6, percent: 85, percentText: '⚙️ 85%', color: '#8878c3', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Firebase', duration: 11, percent: 80, percentText: '⚙️ 80%', color: '#a0d6b4', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Postman', duration: 5, percent: 90, percentText: '⚙️ 90%', color: '#0073cf', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Illustration', duration: 7, percent: 100, percentText: '⚙️ 100%', color: '#808080', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'XD', duration: 10, percent: 100, percentText: '⚙️ 100%', color: '#deaa88', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' },
+        { title: 'Zeplin', duration: 6, percent: 100, percentText: '⚙️ 100%', color: '#ffa089', style: 'font-size: 20px; margin-right: 120px; color: #f5f3ef;' }
+      ]
     }
   }
 })

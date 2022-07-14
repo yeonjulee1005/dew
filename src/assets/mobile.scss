@@ -159,7 +159,7 @@
       flex-direction: column;
       flex-wrap: nowrap !important;
       width: 100vw;
-      height: 320vh;
+      height: fit-content;
       margin: 200px auto 0px;
       .skills-intro {
         position: relative;
@@ -340,12 +340,13 @@
       flex-wrap: nowrap;
       width: 100vw;
       height: 300vh;
-      margin: 100px auto 750px;
+      margin: 50px auto 750px;
       .reference-section {
         position: relative;
-        margin-top: 200px;
+        margin-top: 150px;
         width: 100%;
         .section-title {
+          margin-left: 50px;
           font-weight: 800;
           font-size: 2.4em;
         }
@@ -360,7 +361,7 @@
         }
         .section-text {
           width: fit-content;
-          margin: 10px 0 10px 150px;
+          margin: 10px 0 10px 50px;
           padding-bottom: 5px;
           font-weight: 400;
           font-size: 1.2em;

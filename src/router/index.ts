@@ -45,6 +45,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "dlog" */ '../views/dLog/2021.vue')
   },
   {
+    path: '/dLog/2022',
+    name: '2022',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "dlog" */ '../views/dLog/2022.vue')
+  },
+  {
     path: '/projects/calculator',
     name: 'Custom Calculator',
     // route level code-splitting

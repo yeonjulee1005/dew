@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-column reference-section">
     <div class="flex flex-column">
-      <div class="section-title ml-50">
+      <div class="section-title">
         {{ title.main }}
       </div>
       <div class="section-bg-text">
@@ -13,94 +13,37 @@
     </div>
     <el-row class="reference-list">
       <el-col :span="8" class="reference-column">
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.avrosoft.img"
-              :alt="items.avrosoft.title"
-              @click="onClickDialog(this.items.avrosoft.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.avrosoft.title }}
-          </div>
-        </el-row>
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.doowon.img"
-              :alt="items.doowon.title"
-              @click="onClickDialog(this.items.doowon.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.doowon.title }}
-          </div>
-          </el-row>
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.labor.img"
-              :alt="items.labor.title"
-              @click="onClickDialog(this.items.labor.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.labor.title }}
-          </div>
-          </el-row>
+        <div
+          v-for="item in firstColumnItems"
+          :key="item.index"
+        >
+          <ReferenceProject
+            :reference-data="item"
+            @click="onClickDialog"
+          />
+        </div>
       </el-col>
       <el-col :span="8" class="reference-column">
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.invenia.img"
-              :alt="items.invenia.title"
-              @click="onClickDialog(this.items.invenia.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.invenia.title }}
-          </div>
-        </el-row>
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.orijen.img"
-              :alt="items.orijen.title"
-              @click="onClickDialog(this.items.orijen.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.orijen.title }}
-          </div>
-        </el-row>
+        <div
+          v-for="item in secondColumnItems"
+          :key="item.index"
+        >
+          <ReferenceProject
+            :reference-data="item"
+            @click="onClickDialog"
+          />
+        </div>
       </el-col>
       <el-col :span="8" class="reference-column">
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.wuzo.img"
-              :alt="items.wuzo.title"
-              @click="onClickDialog(this.items.wuzo.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.wuzo.title }}
-          </div>
-        </el-row>
-        <el-row class="flex-column flex-align-center">
-          <div class="reference-item cursor">
-            <img
-              :src="items.bega.img"
-              :alt="items.bega.title"
-              @click="onClickDialog(this.items.bega.alt)"
-            >
-          </div>
-          <div class="item-text">
-            {{ items.bega.title }}
-          </div>
-        </el-row>
+        <div
+          v-for="item in thirdColumnItems"
+          :key="item.index"
+        >
+          <ReferenceProject
+            :reference-data="item"
+            @click="onClickDialog"
+          />
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -113,28 +56,24 @@
           <el-icon class="fas fa-times" />
         </el-button>
       </div>
-      <div
-        v-for="(item, keys) in dialogItems"
-        :key="keys"
-        class=" dialog-images flex flex-justify-center flex-column"
-      >
+      <div class=" dialog-images flex flex-justify-center flex-column">
         <div
           class="dialog-title ml-30"
           style="font-size: 1.5em; font-weight: 700;"
         >
-          {{ item.title }}
+          {{ dialogItems.title }}
         </div>
         <div
           class="dialog-desc ml-30 mt-20 mb-20"
           style="font-size: 1.2em;"
         >
-          {{ item.desc }}
+          {{ dialogItems.desc }}
         </div>
         <img
           class="dialog-image cursor"
-          :src="item.img"
+          :src="dialogItems.img"
           style="width:90vw;"
-          @click="openReference(item.url)"
+          @click="openReference(dialogItems.url)"
         />
       </div>
     </div>
@@ -143,9 +82,13 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import ReferenceProject from '@/components/atom/reference-project.vue'
 
 export default defineComponent({
   name: 'Reference',
+  components: {
+    ReferenceProject
+  },
   setup () {
     const dialogState = ref(false)
     return {
@@ -159,45 +102,78 @@ export default defineComponent({
         background: 'PROJECTS',
         desc: '개발 및 유지보수를 진행한 대표사례 입니다.'
       },
-      items: {
-        avrosoft: {
-          title: '아브로소프트코리아',
-          img: require('@/assets/img/references/avrosoft.png'),
-          alt: 'avro'
+      firstColumnItems: [
+        {
+          title: '유심사',
+          desc: 'Nuxt.js 기반의 eSim 서비스 페이지 입니다. 해당 프로젝트는 FE 개발 총괄담당하여 개발하였습니다.',
+          url: 'https://usimsa.com',
+          dialogImg: require('@/assets/img/references/details/usimsa-detail.png'),
+          img: require('@/assets/img/references/usimsa.png'),
+          alt: 'usimsa'
         },
-        doowon: {
+        {
           title: '두원실업',
+          desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+          url: 'https://www.doowonpet.co.kr/',
+          dialogImg: require('@/assets/img/references/details/doowon-detail.jpg'),
           img: require('@/assets/img/references/doowon.png'),
           alt: 'doowon'
         },
-        invenia: {
-          title: '인베니아',
-          img: require('@/assets/img/references/invenia.png'),
-          alt: 'invenia'
-        },
-        orijen: {
-          title: '오리젠',
-          img: require('@/assets/img/references/orijen.png'),
-          alt: 'orijen'
-        },
-        wuzo: {
-          title: '우조',
-          img: require('@/assets/img/references/wuzo.png'),
-          alt: 'wuzo'
-        },
-        bega: {
-          title: '베가',
-          img: require('@/assets/img/references/bega.png'),
-          alt: 'bega'
-        },
-        labor: {
+        {
           title: '노무인사관리플랫폼 사용자페이지',
+          desc: 'Nuxt,Node.js를 이용한 클라우드기반 노무인사관리플랫폼의 홍보페이지 및 사용자페이지 입니다.',
+          url: 'http://pay.avrosoft.co.kr/',
+          dialogImg: require('@/assets/img/references/details/labor-detail.jpg'),
           img: require('@/assets/img/references/labor.jpg'),
           alt: 'labor'
         }
-      },
+      ],
+      secondColumnItems: [
+        {
+          title: '아브로소프트코리아',
+          desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+          url: 'http://avrosoft.co.kr',
+          dialogImg: require('@/assets/img/references/details/avrosoft-detail.jpg'),
+          img: require('@/assets/img/references/avrosoft.png'),
+          alt: 'avro'
+        },
+        {
+          title: '인베니아',
+          desc: '자사 래거시 사이트 유지보수 입니다.',
+          url: 'https://www.inveniacorp.com/',
+          dialogImg: require('@/assets/img/references/details/invenia-detail.jpg'),
+          img: require('@/assets/img/references/invenia.png'),
+          alt: 'invenia'
+        },
+        {
+          title: '오리젠',
+          desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+          url: 'http://orijen.co.kr/',
+          dialogImg: require('@/assets/img/references/details/orijen-detail.jpg'),
+          img: require('@/assets/img/references/orijen.png'),
+          alt: 'orijen'
+        }
+      ],
+      thirdColumnItems: [
+        {
+          title: '우조',
+          desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+          url: 'http://www.wuzo.co.kr/',
+          dialogImg: require('@/assets/img/references/details/wuzo-detail.jpg'),
+          img: require('@/assets/img/references/wuzo.png'),
+          alt: 'wuzo'
+        },
+        {
+          title: '베가',
+          desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
+          url: 'http://www.begatek.com/',
+          dialogImg: require('@/assets/img/references/details/bega-detail.jpg'),
+          img: require('@/assets/img/references/bega.png'),
+          alt: 'bega'
+        }
+      ],
       referenceLists: '',
-      dialogItems: Array<{title: string, desc: string, url: string, img: string}>()
+      dialogItems: Object()
     }
   },
   methods: {
@@ -205,68 +181,69 @@ export default defineComponent({
       this.dialogState = true
       this.referenceLists = val
       switch (val) {
-        case 'avro':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '아브로소프트코리아',
-            desc: `${'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.'}`,
-            url: 'http://avrosoft.co.kr',
-            img: require('@/assets/img/references/details/avrosoft-detail.jpg')
-          })
+        case 'usimsa' :
+          this.dialogItems = {
+            title: this.firstColumnItems[0].title,
+            desc: this.firstColumnItems[0].desc,
+            url: this.firstColumnItems[0].url,
+            img: this.firstColumnItems[0].dialogImg
+          }
           break
-        case 'doowon':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '두원실업',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            url: 'https://www.doowonpet.co.kr/',
-            img: require('@/assets/img/references/details/doowon-detail.jpg')
-          })
+        case 'doowon' :
+          this.dialogItems = {
+            title: this.firstColumnItems[1].title,
+            desc: this.firstColumnItems[1].desc,
+            url: this.firstColumnItems[1].url,
+            img: this.firstColumnItems[1].dialogImg
+          }
           break
-        case 'invenia':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '인베니아',
-            desc: '자사 래거시 사이트 유지보수 입니다.',
-            url: 'https://www.inveniacorp.com/',
-            img: require('@/assets/img/references/details/invenia-detail.jpg')
-          })
+        case 'labor' :
+          this.dialogItems = {
+            title: this.firstColumnItems[2].title,
+            desc: this.firstColumnItems[2].desc,
+            url: this.firstColumnItems[2].url,
+            img: this.firstColumnItems[2].dialogImg
+          }
           break
-        case 'orijen':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '오리젠코리아',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            url: 'http://orijen.co.kr/',
-            img: require('@/assets/img/references/details/orijen-detail.jpg')
-          })
+        case 'avro' :
+          this.dialogItems = {
+            title: this.secondColumnItems[0].title,
+            desc: this.secondColumnItems[0].desc,
+            url: this.secondColumnItems[0].url,
+            img: this.secondColumnItems[0].dialogImg
+          }
           break
-        case 'wuzo':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '우조엔터테인먼트',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            url: 'http://www.wuzo.co.kr/',
-            img: require('@/assets/img/references/details/wuzo-detail.jpg')
-          })
+        case 'invenia' :
+          this.dialogItems = {
+            title: this.secondColumnItems[1].title,
+            desc: this.secondColumnItems[1].desc,
+            url: this.secondColumnItems[1].url,
+            img: this.secondColumnItems[1].dialogImg
+          }
           break
-        case 'bega':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '배가',
-            desc: 'PHP와 자바스크립트 기반의 반응형 웹페이지 입니다.',
-            url: 'http://www.begatek.com/',
-            img: require('@/assets/img/references/details/bega-detail.jpg')
-          })
+        case 'orijen' :
+          this.dialogItems = {
+            title: this.secondColumnItems[2].title,
+            desc: this.secondColumnItems[2].desc,
+            url: this.secondColumnItems[2].url,
+            img: this.secondColumnItems[2].dialogImg
+          }
           break
-        case 'labor':
-          this.dialogItems = []
-          this.dialogItems.push({
-            title: '노무인사관리플랫폼',
-            desc: 'Nuxt,Node.js를 이용한 클라우드기반 노무인사관리플랫폼의 홍보페이지 및 사용자페이지 입니다.',
-            url: 'http://pay.avrosoft.co.kr/',
-            img: require('@/assets/img/references/details/labor-detail.jpg')
-          })
+        case 'wuzo' :
+          this.dialogItems = {
+            title: this.thirdColumnItems[0].title,
+            desc: this.thirdColumnItems[0].desc,
+            url: this.thirdColumnItems[0].url,
+            img: this.thirdColumnItems[0].dialogImg
+          }
+          break
+        case 'bega' :
+          this.dialogItems = {
+            title: this.thirdColumnItems[1].title,
+            desc: this.thirdColumnItems[1].desc,
+            url: this.thirdColumnItems[1].url,
+            img: this.thirdColumnItems[1].dialogImg
+          }
           break
       }
     },
